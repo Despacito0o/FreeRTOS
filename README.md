@@ -1,194 +1,179 @@
-# FreeRTOS 嵌入式开发学习库 🚀
+# FreeRTOS Embedded Development Learning Library
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/stargazers)
-[![Forks](https://img.shields.io/github/forks/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/network)
-[![Issues](https://img.shields.io/github/issues/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/issues)
-[![STM32](https://img.shields.io/badge/STM32-F103-blue)](https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html)
-[![FreeRTOS](https://img.shields.io/badge/FreeRTOS-v202212.01-green)](https://www.freertos.org/)
+<div align="center">
 
-## 📚 项目概述
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/FreeRTOS.svg?style=social&label=Stars)](https://github.com/yourusername/FreeRTOS)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/FreeRTOS.svg?style=social&label=Forks)](https://github.com/yourusername/FreeRTOS)
+[![GitHub watchers](https://img.shields.io/github/watchers/yourusername/FreeRTOS.svg?style=social&label=Watchers)](https://github.com/yourusername/FreeRTOS)
 
-这是一个专注于FreeRTOS嵌入式系统开发的学习资源库，特别适合STM32开发者。本仓库提供了详细的FreeRTOS移植教程、示例代码和开发指南，帮助开发者快速掌握FreeRTOS在STM32平台上的应用。
+[English](README.md) | [中文](README_zh.md)
 
-### 🌟 主要特点
+</div>
 
-- 完整的FreeRTOS移植教程
-- 详细的STM32开发环境搭建指南
-- 丰富的示例代码
-- 常见问题解决方案
-- 持续更新的学习资源
+## 📚 Project Overview
 
-## 🗂️ 项目结构
+This is a learning resource library focused on FreeRTOS embedded system development, designed to help developers quickly get started with STM32 development. The repository provides detailed tutorials, example code, and development environment configuration guides to help you easily begin your FreeRTOS development journey.
+
+### 🌟 Key Features
+
+- 📖 Detailed FreeRTOS porting tutorial
+- 🔧 Complete STM32 development environment setup guide
+- 💡 Practical example projects
+- 📝 Clear documentation
+- 🔍 Common problem solutions
+
+## 📁 Directory Structure
 
 ```
 FreeRTOS/
-├── Despacito/                # STM32F103系列项目
-│   ├── 002/                  # FreeRTOS移植示例
-│   │   ├── FreeRTOS/        # FreeRTOS源码
-│   │   │   ├── freertos src/    # 核心源码
-│   │   │   ├── freertos port/   # 移植文件
-│   │   │   └── freertos include/# 头文件
-│   │   └── User/            # 用户代码
-│   └── read.md              # 移植教程文档
-└── README.md                # 项目说明文档
+├── docs/                     # Documentation
+│   ├── en/                  # English documentation
+│   │   ├── FreeRTOS-Port-Guide.md
+│   │   └── STM32-Dev-Environment-Setup.md
+│   └── zh/                  # Chinese documentation
+│       ├── FreeRTOS移植详解.md
+│       └── STM32标准库开发环境搭建教程.md
+├── examples/                 # Example projects
+│   └── Despacito/           # STM32F103 example project
+└── README.md                # Project documentation
 ```
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境要求
-
-- Keil MDK 5.x
-- STM32标准外设库
-- STM32F103开发板
-- ST-Link调试器
-
-### 安装步骤
-
-1. 克隆仓库
+1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/FreeRTOS.git
 ```
 
-2. 按照[移植教程](Despacito/read.md)进行环境配置
+2. Read documentation
+- View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
+- Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
 
-3. 打开示例工程进行学习
+3. Run examples
+- Go to [Despacito Example Project](examples/Despacito)
+- Follow the project README.md instructions for compilation and running
 
-## 📖 详细教程
+## 📖 Documentation Navigation
 
-### FreeRTOS移植教程
+### Development Environment Setup
+- [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
+  - Keil MDK installation and configuration
+  - STM32 standard peripheral library configuration
+  - Project creation and configuration
+  - Common problem solutions
 
-详细的移植步骤请参考[FreeRTOS移植详解](Despacito/read.md)，包含：
+### FreeRTOS Porting
+- [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
+  - Source code acquisition and configuration
+  - Project file organization
+  - Porting steps
+  - Compilation and debugging
 
-- 环境准备
-- 源码获取
-- 工程配置
-- 文件修改
-- 编译调试
-- 常见问题解决
+## 🤝 Contributing
 
-### STM32开发环境搭建
+Issues and Pull Requests are welcome to help improve this project. Before submitting, please ensure:
 
-1. 安装Keil MDK开发环境
-2. 下载STM32标准外设库
-3. 配置工程文件
-4. 配置调试器
+1. Code follows project coding standards
+2. Necessary comments and documentation are added
+3. Tests pass and no new issues are introduced
 
-详细步骤请参考[环境搭建教程](README.md#stm32标准库开发环境搭建教程)
+## 📄 License
 
-## 🤝 贡献指南
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-欢迎提交Issue和Pull Request来帮助改进这个项目！
+## 🙏 Acknowledgments
 
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
+Thanks to all developers who have contributed to this project!
 
-## 📝 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 👥 联系方式
-
-- 项目维护者：[Your Name](https://github.com/yourusername)
-- 邮箱：[your.email@example.com](mailto:your.email@example.com)
-- 项目链接：[https://github.com/yourusername/FreeRTOS](https://github.com/yourusername/FreeRTOS)
-
-## 🙏 致谢
-
-感谢所有为这个项目做出贡献的开发者们！
-
-## 项目列表
+## Project List
 
 ### Despacito
-STM32F103系列的嵌入式开发项目，使用标准外设库(StdPeriph)进行开发。
+STM32F103 series embedded development project, using standard peripheral library (StdPeriph) for development.
 
-## STM32标准库开发环境搭建教程
+## STM32 Standard Library Development Environment Setup Guide
 
-### 准备工作
-1. 安装Keil MDK开发环境
-2. 下载STM32标准外设库
+### Preparation
+1. Install Keil MDK development environment
+2. Download STM32 standard peripheral library
 
-### 详细步骤
-1. 打开Keil，新建一个project
-   ![新建工程](https://i-blog.csdnimg.cn/direct/456e7f1370cd4f5d90b204dcbd37ff2a.png)
+### Detailed Steps
+1. Open Keil, create a new project
+   ![Create Project](https://i-blog.csdnimg.cn/direct/456e7f1370cd4f5d90b204dcbd37ff2a.png)
 
-2. 选择一个存放工程的文件夹，并给工程命名后点击保存
-   ![命名工程](https://i-blog.csdnimg.cn/direct/59e3493295b94cdaaa53beb27745c2e7.png)
+2. Select a folder to store the project and name it, then click Save
+   ![Name Project](https://i-blog.csdnimg.cn/direct/59e3493295b94cdaaa53beb27745c2e7.png)
 
-3. 选择您的芯片型号（本例中使用STM32F103C8），然后点击OK
-   ![选择芯片](https://i-blog.csdnimg.cn/direct/95742a07675b467a9846eacbaf9e001c.png)
+3. Select your chip model (in this example, STM32F103C8), then click OK
+   ![Select Chip](https://i-blog.csdnimg.cn/direct/95742a07675b467a9846eacbaf9e001c.png)
 
-4. 关闭弹出的窗口
-   ![关闭窗口](https://i-blog.csdnimg.cn/direct/3fa8e6d04a2b43a59f3e0c102107a86c.png)
+4. Close the pop-up window
+   ![Close Window](https://i-blog.csdnimg.cn/direct/3fa8e6d04a2b43a59f3e0c102107a86c.png)
 
-5. 在刚创建的工程文件夹中添加三个子文件夹：Start、Library和User
-   ![添加文件夹](https://i-blog.csdnimg.cn/direct/315e2eb94b954e86a950d86e0363cb3c.png)
+5. Add three subfolders to the project folder: Start, Library, and User
+   ![Add Folder](https://i-blog.csdnimg.cn/direct/315e2eb94b954e86a950d86e0363cb3c.png)
 
-### 下载并配置标准外设库
-1. 前往ST官网下载最新标准外设库：[点击前往官方下载](https://www.st.com.cn/zh/embedded-software/stsw-stm32054.html)
-   ![下载库](https://i-blog.csdnimg.cn/direct/1868afb0b36246ab98824aaa4835d206.png)
+### Download and Configure Standard Peripheral Library
+1. Go to ST official website to download the latest standard peripheral library: [Click to Official Download](https://www.st.com.cn/zh/embedded-software/stsw-stm32054.html)
+   ![Download Library](https://i-blog.csdnimg.cn/direct/1868afb0b36246ab98824aaa4835d206.png)
 
-2. 点击"获取最新版本"，并接受许可协议
-   ![接受协议](https://i-blog.csdnimg.cn/direct/4f31f48d21184a6488a683fb3600ff1f.png)
+2. Click "Get Latest Version" and accept the license agreement
+   ![Accept Agreement](https://i-blog.csdnimg.cn/direct/4f31f48d21184a6488a683fb3600ff1f.png)
 
-3. 使用您的ST账号登录
-   ![登录](https://i-blog.csdnimg.cn/direct/d993c74d66424daba63851da6545deb3.png)
+3. Use your ST account to log in
+   ![Login](https://i-blog.csdnimg.cn/direct/d993c74d66424daba63851da6545deb3.png)
 
-4. 点击"Download latest"下载最新版本
-   ![下载最新版本](https://i-blog.csdnimg.cn/direct/658af4d3aaa04453906969c731e94c8a.png)
+4. Click "Download Latest" to download the latest version
+   ![Download Latest Version](https://i-blog.csdnimg.cn/direct/658af4d3aaa04453906969c731e94c8a.png)
 
-5. 解压下载的文件
-   ![解压文件](https://i-blog.csdnimg.cn/direct/82860324304248a9bad5e8959c45db79.png)
+5. Unzip the downloaded file
+   ![Unzip File](https://i-blog.csdnimg.cn/direct/82860324304248a9bad5e8959c45db79.png)
 
-### 文件配置
-1. 找到启动文件路径：`Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm`，将其中所有文件复制到Start文件夹
-   ![复制启动文件](https://i-blog.csdnimg.cn/direct/8f5c0ca058b9489f91cb8b49b408f1fd.png)
+### File Configuration
+1. Find the startup file path: `Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm`, and copy all files to the Start folder
+   ![Copy Startup File](https://i-blog.csdnimg.cn/direct/8f5c0ca058b9489f91cb8b49b408f1fd.png)
 
-2. 导航至路径：`Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x`，将相关文件复制到Start文件夹
-   ![复制设备支持文件](https://i-blog.csdnimg.cn/direct/734a5886f8684d41879e48f89226fd66.png)
+2. Navigate to the path: `Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x`, and copy related files to the Start folder
+   ![Copy Device Support Files](https://i-blog.csdnimg.cn/direct/734a5886f8684d41879e48f89226fd66.png)
 
-3. 导航至路径：`Libraries\CMSIS\CM3\CoreSupport`，将核心支持文件复制到Start文件夹
-   ![复制核心支持文件](https://i-blog.csdnimg.cn/direct/24f5a0388cf040ee84d68230113a7fdf.png)
+3. Navigate to the path: `Libraries\CMSIS\CM3\CoreSupport`, and copy the core support files to the Start folder
+   ![Copy Core Support Files](https://i-blog.csdnimg.cn/direct/24f5a0388cf040ee84d68230113a7fdf.png)
 
-4. 导航至路径：`Libraries\STM32F10x_StdPeriph_Driver\src`，将文件夹内容复制到Library文件夹
-   ![复制标准外设驱动文件](https://i-blog.csdnimg.cn/direct/48399df386f64596a552435c93296bd6.png)
+4. Navigate to the path: `Libraries\STM32F10x_StdPeriph_Driver\src`, and copy the folder content to the Library folder
+   ![Copy Standard Peripheral Driver Files](https://i-blog.csdnimg.cn/direct/48399df386f64596a552435c93296bd6.png)
 
-5. 打开inc文件夹（路径：`Libraries\STM32F10x_StdPeriph_Driver\inc`），将文件夹内容复制到Library文件夹
-   ![复制头文件](https://i-blog.csdnimg.cn/direct/d7537287252a4dcaa0d95aa38caf5fb7.png)
+5. Open the inc folder (path: `Libraries\STM32F10x_StdPeriph_Driver\inc`), and copy the folder content to the Library folder
+   ![Copy Header Files](https://i-blog.csdnimg.cn/direct/d7537287252a4dcaa0d95aa38caf5fb7.png)
 
-6. 导航至路径：`Project\STM32F10x_StdPeriph_Template`，将模板文件复制到User文件夹
-   ![复制模板文件](https://i-blog.csdnimg.cn/direct/b61aa4c1fdf04ea48ec8ff18f9d7e90f.png)
+6. Navigate to the path: `Project\STM32F10x_StdPeriph_Template`, and copy the template files to the User folder
+   ![Copy Template Files](https://i-blog.csdnimg.cn/direct/b61aa4c1fdf04ea48ec8ff18f9d7e90f.png)
 
-### 工程配置
-1. 返回Keil，点击工程文件管理按钮
-   ![工程管理](https://i-blog.csdnimg.cn/direct/d38bef47b03345f2bad77ece96d4c707.png)
+### Project Configuration
+1. Return to Keil, click the project file management button
+   ![Project Management](https://i-blog.csdnimg.cn/direct/d38bef47b03345f2bad77ece96d4c707.png)
 
-2. 点击"New Group"按钮新建3个分组（Start、Library、User）
-   ![新建分组](https://i-blog.csdnimg.cn/direct/2fc57debf42142e0853f06ea0cd5e6f3.png)
+2. Click the "New Group" button to create 3 groups (Start, Library, User)
+   ![Create Groups](https://i-blog.csdnimg.cn/direct/2fc57debf42142e0853f06ea0cd5e6f3.png)
 
-3. 添加各分组的文件
-   - Start分组: 添加启动文件和相关支持文件
-   - Library分组: 添加标准外设库文件
-   - User分组: 添加用户代码文件
+3. Add files to each group
+   - Start group: Add startup files and related support files
+   - Library group: Add standard peripheral library files
+   - User group: Add user code files
 
-4. 配置包含路径和宏定义
-   - 添加Include Paths: Start、Library、User
-   - 添加宏定义: USE_STDPERIPH_DRIVER, STM32F10X_MD
+4. Configure Include Paths and Macro Definitions
+   - Add Include Paths: Start, Library, User
+   - Add Macro Definitions: USE_STDPERIPH_DRIVER, STM32F10X_MD
 
-5. 配置调试器设置
-   - 选择ST-Link Debugger
-   - 勾选"Reset and Run"选项
+5. Configure Debugger Settings
+   - Select ST-Link Debugger
+   - Check "Reset and Run" option
 
-### 解决常见问题
-如果遇到core_cm3.c和core_cm3.h文件版本过旧导致的错误：
-1. 下载STM32Cube_FW软件包: [ST官网链接](https://www.st.com.cn/zh/embedded-software/stm32cubef1.html)
-2. 从`Drivers\CMSIS\Include`目录下拷贝新版头文件
-3. 停用旧版core_cm3.c，改用CMSIS标准接口
+### Solve Common Problems
+If you encounter errors due to outdated core_cm3.c and core_cm3.h files:
+1. Download STM32Cube_FW software package: [ST Official Link](https://www.st.com.cn/zh/embedded-software/stm32cubef1.html)
+2. Copy new version header files from `Drivers\CMSIS\Include` directory
+3. Disable old version core_cm3.c and use CMSIS standard interface
 
-### 示例代码
+### Example Code
 ```cpp
 #include "stm32f10x.h"
 int main(void) {
@@ -204,11 +189,11 @@ int main(void) {
 }
 ```
 
-## 项目编译与下载
-编译工程并确保0错误、0警告，然后使用ST-Link下载程序到开发板。
+## Project Compilation and Download
+Compile the project and ensure 0 errors and 0 warnings, then use ST-Link to download the program to the development board.
 
-![编译成功](https://i-blog.csdnimg.cn/direct/f91d31ff6e034111af569b5981f41213.png)
-![运行结果](https://i-blog.csdnimg.cn/direct/1fb27fecd8fd4214a76819224b295a4a.jpeg)
+![Compile Success](https://i-blog.csdnimg.cn/direct/f91d31ff6e034111af569b5981f41213.png)
+![Run Result](https://i-blog.csdnimg.cn/direct/1fb27fecd8fd4214a76819224b295a4a.jpeg)
 
 
 
