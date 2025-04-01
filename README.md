@@ -1,7 +1,104 @@
-# FreeRTOS 嵌入式开发学习库
+# FreeRTOS 嵌入式开发学习库 🚀
 
-## 项目概述
-本仓库包含FreeRTOS嵌入式系统开发的学习资料和示例项目，帮助初学者快速入门STM32开发。
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/stargazers)
+[![Forks](https://img.shields.io/github/forks/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/network)
+[![Issues](https://img.shields.io/github/issues/yourusername/FreeRTOS.svg)](https://github.com/yourusername/FreeRTOS/issues)
+[![STM32](https://img.shields.io/badge/STM32-F103-blue)](https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html)
+[![FreeRTOS](https://img.shields.io/badge/FreeRTOS-v202212.01-green)](https://www.freertos.org/)
+
+## 📚 项目概述
+
+这是一个专注于FreeRTOS嵌入式系统开发的学习资源库，特别适合STM32开发者。本仓库提供了详细的FreeRTOS移植教程、示例代码和开发指南，帮助开发者快速掌握FreeRTOS在STM32平台上的应用。
+
+### 🌟 主要特点
+
+- 完整的FreeRTOS移植教程
+- 详细的STM32开发环境搭建指南
+- 丰富的示例代码
+- 常见问题解决方案
+- 持续更新的学习资源
+
+## 🗂️ 项目结构
+
+```
+FreeRTOS/
+├── Despacito/                # STM32F103系列项目
+│   ├── 002/                  # FreeRTOS移植示例
+│   │   ├── FreeRTOS/        # FreeRTOS源码
+│   │   │   ├── freertos src/    # 核心源码
+│   │   │   ├── freertos port/   # 移植文件
+│   │   │   └── freertos include/# 头文件
+│   │   └── User/            # 用户代码
+│   └── read.md              # 移植教程文档
+└── README.md                # 项目说明文档
+```
+
+## 🚀 快速开始
+
+### 环境要求
+
+- Keil MDK 5.x
+- STM32标准外设库
+- STM32F103开发板
+- ST-Link调试器
+
+### 安装步骤
+
+1. 克隆仓库
+```bash
+git clone https://github.com/yourusername/FreeRTOS.git
+```
+
+2. 按照[移植教程](Despacito/read.md)进行环境配置
+
+3. 打开示例工程进行学习
+
+## 📖 详细教程
+
+### FreeRTOS移植教程
+
+详细的移植步骤请参考[FreeRTOS移植详解](Despacito/read.md)，包含：
+
+- 环境准备
+- 源码获取
+- 工程配置
+- 文件修改
+- 编译调试
+- 常见问题解决
+
+### STM32开发环境搭建
+
+1. 安装Keil MDK开发环境
+2. 下载STM32标准外设库
+3. 配置工程文件
+4. 配置调试器
+
+详细步骤请参考[环境搭建教程](README.md#stm32标准库开发环境搭建教程)
+
+## 🤝 贡献指南
+
+欢迎提交Issue和Pull Request来帮助改进这个项目！
+
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+## 📝 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 👥 联系方式
+
+- 项目维护者：[Your Name](https://github.com/yourusername)
+- 邮箱：[your.email@example.com](mailto:your.email@example.com)
+- 项目链接：[https://github.com/yourusername/FreeRTOS](https://github.com/yourusername/FreeRTOS)
+
+## 🙏 致谢
+
+感谢所有为这个项目做出贡献的开发者们！
 
 ## 项目列表
 
