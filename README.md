@@ -33,8 +33,8 @@ FreeRTOS/
 │   └── zh/                  # Chinese documentation
 │       ├── FreeRTOS移植详解.md
 │       └── STM32标准库开发环境搭建教程.md
-├── examples/                 # Example projects
-│   └── Despacito/           # STM32F103 example project
+├── Despacito/               # STM32F103 example project
+│   └── 002/                # FreeRTOS example project
 └── README.md                # Project documentation
 ```
 
@@ -50,7 +50,7 @@ git clone https://github.com/yourusername/FreeRTOS.git
 - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
 
 3. Run examples
-- Go to [Despacito Example Project](examples/Despacito)
+- Go to [Despacito Example Project](Despacito/002)
 - Follow the project README.md instructions for compilation and running
 
 ## 📖 Documentation Navigation

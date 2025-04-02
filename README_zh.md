@@ -50,7 +50,7 @@ git clone https://github.com/yourusername/FreeRTOS.git
 - 学习 [FreeRTOS移植详解](docs/zh/FreeRTOS移植详解.md)
 
 3. 运行示例
-- 进入 [Despacito示例项目](examples/Despacito)
+- 进入 [Despacito示例项目](Despacito/002)
 - 按照项目README.md的说明进行编译和运行
 
 ## 📖 文档导航
