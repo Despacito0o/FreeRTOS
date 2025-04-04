@@ -2,9 +2,9 @@
 
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/FreeRTOS.svg?style=social&label=Stars)](https://github.com/yourusername/FreeRTOS)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/FreeRTOS.svg?style=social&label=Forks)](https://github.com/yourusername/FreeRTOS)
-[![GitHub watchers](https://img.shields.io/github/watchers/yourusername/FreeRTOS.svg?style=social&label=Watchers)](https://github.com/yourusername/FreeRTOS)
+[![GitHub stars](https://img.shields.io/github/stars/Despacito0o/FreeRTOS.svg?style=social&label=Stars)](https://github.com/Despacito0o/FreeRTOS)
+[![GitHub forks](https://img.shields.io/github/forks/Despacito0o/FreeRTOS.svg?style=social&label=Forks)](https://github.com/Despacito0o/FreeRTOS)
+[![GitHub watchers](https://img.shields.io/github/watchers/Despacito0o/FreeRTOS.svg?style=social&label=Watchers)](https://github.com/Despacito0o/FreeRTOS)
 
 [English](README.md) | [中文](README_zh.md)
 
@@ -29,12 +29,16 @@ FreeRTOS/
 ├── docs/                     # Documentation
 │   ├── en/                  # English documentation
 │   │   ├── FreeRTOS-Port-Guide.md
-│   │   └── STM32-Dev-Environment-Setup.md
+│   │   ├── STM32-Dev-Environment-Setup.md
+│   │   └── Creating-Simple-FreeRTOS-Project-on-STM32.md
 │   └── zh/                  # Chinese documentation
 │       ├── FreeRTOS移植详解.md
-│       └── STM32标准库开发环境搭建教程.md
-├── Despacito/               # STM32F103 example project
-│   └── 002/                # FreeRTOS example project
+│       ├── STM32标准库开发环境搭建教程.md
+│       └── FreeRTOS移植详解-003.md
+├── Despacito/               # STM32F103 example projects
+│   ├── 001/                # STM32 project template
+│   ├── 002/                # FreeRTOS basic example
+│   └── 003/                # FreeRTOS LED blink example
 └── README.md                # Project documentation
 ```
 
@@ -42,16 +46,18 @@ FreeRTOS/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/FreeRTOS.git
+git clone https://github.com/Despacito0o/FreeRTOS.git
 ```
 
 2. Read documentation
 - View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
 - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
+- Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
 
 3. Run examples
-- Go to [Despacito Example Project](Despacito/002)
-- Follow the project README.md instructions for compilation and running
+- Go to [Despacito Basic Example](Despacito/002)
+- Go to [Despacito FreeRTOS LED Blink Example](Despacito/003)
+- Follow each project's README.md instructions for compilation and running
 
 ## 📖 Documentation Navigation
 
@@ -69,6 +75,13 @@ git clone https://github.com/yourusername/FreeRTOS.git
   - Porting steps
   - Compilation and debugging
 
+### FreeRTOS Examples
+- [Creating a Simple FreeRTOS Project on STM32](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
+  - FreeRTOS configuration
+  - Task creation
+  - LED blinking implementation
+  - Debugging and simulation
+
 ## 🤝 Contributing
 
 Issues and Pull Requests are welcome to help improve this project. Before submitting, please ensure:
@@ -85,10 +98,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thanks to all developers who have contributed to this project!
 
+## 👨‍💻 Author
+
+- [Despacito0o](https://github.com/Despacito0o) - FreeRTOS developer and tutorial creator
+- Visit my [CSDN Blog](https://blog.csdn.net/supershmily) for more embedded development content
+
 ## Project List
 
 ### Despacito
-STM32F103 series embedded development project, using standard peripheral library (StdPeriph) for development.
+STM32F103 series embedded development projects, using standard peripheral library (StdPeriph) for development.
+
+#### Despacito/001
+Basic STM32F103 project template with standard peripheral library.
+
+#### Despacito/002
+FreeRTOS basic example.
+
+#### Despacito/003
+FreeRTOS LED blink example - demonstrates task creation and scheduling with a simple LED blinking pattern.
 
 ## STM32 Standard Library Development Environment Setup Guide
 
