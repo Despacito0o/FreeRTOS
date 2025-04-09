@@ -10,6 +10,8 @@
 
 </div>
 
+---
+
 ## 📚 Project Overview
 
 This is a learning resource library focused on FreeRTOS embedded system development, designed to help developers quickly get started with STM32 development. The repository provides detailed tutorials, example code, and development environment configuration guides to help you easily begin your FreeRTOS development journey.
@@ -21,6 +23,8 @@ This is a learning resource library focused on FreeRTOS embedded system developm
 - 💡 Practical example projects
 - 📝 Clear documentation
 - 🔍 Common problem solutions
+
+---
 
 ## 📁 Directory Structure
 
@@ -38,9 +42,14 @@ FreeRTOS/
 ├── Despacito/               # STM32F103 example projects
 │   ├── 001/                # STM32 project template
 │   ├── 002/                # FreeRTOS basic example
-│   └── 003/                # FreeRTOS LED blink example
+│   ├── 003/                # FreeRTOS LED blink example
+│   └── 004/                # FreeRTOS static allocation example
+├── ScoreJudgment/           # FreeRTOS tutorial materials
+│   └── STM32上创建简单FreeRTOS程序详解.md
 └── README.md                # Project documentation
 ```
+
+---
 
 ## 🚀 Quick Start
 
@@ -57,7 +66,10 @@ git clone https://github.com/Despacito0o/FreeRTOS.git
 3. Run examples
 - Go to [Despacito Basic Example](Despacito/002)
 - Go to [Despacito FreeRTOS LED Blink Example](Despacito/003)
+- Go to [Despacito FreeRTOS Static Allocation Example](Despacito/004)
 - Follow each project's README.md instructions for compilation and running
+
+---
 
 ## 📖 Documentation Navigation
 
@@ -82,6 +94,15 @@ git clone https://github.com/Despacito0o/FreeRTOS.git
   - LED blinking implementation
   - Debugging and simulation
 
+### STM32 FreeRTOS Tutorials
+- [STM32上创建简单FreeRTOS程序详解](ScoreJudgment/STM32上创建简单FreeRTOS程序详解.md)
+  - FreeRTOS core principles
+  - Task scheduling and context switching
+  - Resource management and synchronization
+  - Interrupt handling and low power management
+
+---
+
 ## 🤝 Contributing
 
 Issues and Pull Requests are welcome to help improve this project. Before submitting, please ensure:
@@ -90,18 +111,26 @@ Issues and Pull Requests are welcome to help improve this project. Before submit
 2. Necessary comments and documentation are added
 3. Tests pass and no new issues are introduced
 
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+---
 
 ## 🙏 Acknowledgments
 
 Thanks to all developers who have contributed to this project!
 
+---
+
 ## 👨‍💻 Author
 
 - [Despacito0o](https://github.com/Despacito0o) - FreeRTOS developer and tutorial creator
 - Visit my [CSDN Blog](https://blog.csdn.net/supershmily) for more embedded development content
+
+---
 
 ## Project List
 
@@ -116,6 +145,11 @@ FreeRTOS basic example.
 
 #### Despacito/003
 FreeRTOS LED blink example - demonstrates task creation and scheduling with a simple LED blinking pattern.
+
+#### Despacito/004
+FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
+
+---
 
 ## STM32 Standard Library Development Environment Setup Guide
 

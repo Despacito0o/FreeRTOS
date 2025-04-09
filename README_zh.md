@@ -10,6 +10,8 @@
 
 </div>
 
+---
+
 ## 📚 项目概述
 
 这是一个专注于FreeRTOS嵌入式系统开发的学习资源库，旨在帮助开发者快速入门STM32开发。该仓库提供了详细的教程、示例代码和开发环境配置指南，帮助您轻松开始FreeRTOS开发之旅。
@@ -21,6 +23,8 @@
 - 💡 实用的示例项目
 - 📝 清晰的文档说明
 - 🔍 常见问题解决方案
+
+---
 
 ## 📁 目录结构
 
@@ -38,9 +42,14 @@ FreeRTOS/
 ├── Despacito/               # STM32F103示例项目
 │   ├── 001/                # STM32项目模板
 │   ├── 002/                # FreeRTOS基础示例
-│   └── 003/                # FreeRTOS LED闪烁示例
+│   ├── 003/                # FreeRTOS LED闪烁示例
+│   └── 004/                # FreeRTOS静态内存分配示例
+├── ScoreJudgment/           # FreeRTOS教程资料
+│   └── STM32上创建简单FreeRTOS程序详解.md
 └── README.md                # 项目文档
 ```
+
+---
 
 ## 🚀 快速开始
 
@@ -57,7 +66,10 @@ git clone https://github.com/Despacito0o/FreeRTOS.git
 3. 运行示例
 - 进入 [Despacito基础示例](Despacito/002)
 - 进入 [Despacito FreeRTOS LED闪烁示例](Despacito/003)
+- 进入 [Despacito FreeRTOS静态内存分配示例](Despacito/004)
 - 按照每个项目的README.md指南进行编译和运行
+
+---
 
 ## 📖 文档导航
 
@@ -82,6 +94,15 @@ git clone https://github.com/Despacito0o/FreeRTOS.git
   - LED闪烁实现
   - 调试与仿真
 
+### STM32 FreeRTOS教程
+- [STM32上创建简单FreeRTOS程序详解](ScoreJudgment/STM32上创建简单FreeRTOS程序详解.md)
+  - FreeRTOS核心原理
+  - 任务调度与上下文切换
+  - 资源管理与同步机制
+  - 中断处理与低功耗管理
+
+---
+
 ## 🤝 贡献
 
 欢迎提交Issue和Pull Request来帮助改进这个项目。在提交之前，请确保：
@@ -90,18 +111,26 @@ git clone https://github.com/Despacito0o/FreeRTOS.git
 2. 添加了必要的注释和文档
 3. 测试通过，没有引入新的问题
 
+---
+
 ## 📄 许可证
 
 本项目基于MIT许可证 - 详情请见 [LICENSE](LICENSE) 文件
+
+---
 
 ## 🙏 致谢
 
 感谢所有为这个项目做出贡献的开发者！
 
+---
+
 ## 👨‍💻 作者
 
 - [Despacito0o](https://github.com/Despacito0o) - FreeRTOS开发者和教程创作者
 - 访问我的 [CSDN博客](https://blog.csdn.net/supershmily) 获取更多嵌入式开发内容
+
+---
 
 ## 项目列表
 
@@ -116,6 +145,11 @@ FreeRTOS基础示例。
 
 #### Despacito/003
 FreeRTOS LED闪烁示例 - 演示任务创建和调度，实现简单的LED闪烁模式。
+
+#### Despacito/004
+FreeRTOS静态内存分配示例 - 演示如何使用静态内存分配方式创建任务，适用于资源受限的系统。
+
+---
 
 ## STM32标准库开发环境搭建指南
 
@@ -198,7 +232,7 @@ FreeRTOS LED闪烁示例 - 演示任务创建和调度，实现简单的LED闪�
 如果由于过时的core_cm3.c和core_cm3.h文件出现错误：
 1. 下载STM32Cube_FW软件包：[ST官方链接](https://www.st.com.cn/zh/embedded-software/stm32cubef1.html)
 2. 从`Drivers\CMSIS\Include`目录复制新版本头文件
-3. 禁用旧版本core_cm3.c并使用CMSIS标准接口
+3. 禁用旧版本core_cm3.c，使用CMSIS标准接口
 
 ### 示例代码
 ```cpp
