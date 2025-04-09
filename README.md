@@ -26,102 +26,110 @@ This is a learning resource library focused on FreeRTOS embedded system developm
 
 ---
 
-## 📁 Directory Structure
+## 📋 Project Structure
 
 ```
 FreeRTOS/
 ├── docs/                     # Documentation
-│   ├── en/                  # English documentation
+│   ├── README.md             # Documentation index
+│   ├── en/                   # English documentation
 │   │   ├── FreeRTOS-Port-Guide.md
 │   │   ├── STM32-Dev-Environment-Setup.md
-│   │   └── Creating-Simple-FreeRTOS-Project-on-STM32.md
-│   └── zh/                  # Chinese documentation
+│   │   ├── Creating-Simple-FreeRTOS-Project-on-STM32.md
+│   │   └── tutorials/        # English tutorials
+│   └── zh/                   # Chinese documentation
 │       ├── FreeRTOS移植详解.md
 │       ├── STM32标准库开发环境搭建教程.md
-│       └── FreeRTOS移植详解-003.md
-├── Despacito/               # STM32F103 example projects
-│   ├── 001/                # STM32 project template
-│   ├── 002/                # FreeRTOS basic example
-│   ├── 003/                # FreeRTOS LED blink example
-│   └── 004/                # FreeRTOS static allocation example
-├── ScoreJudgment/           # FreeRTOS tutorial materials
-│   └── STM32上创建简单FreeRTOS程序详解.md
-└── README.md                # Project documentation
+│       ├── FreeRTOS移植详解-003.md
+│       └── tutorials/        # Chinese tutorials
+├── Despacito/                # STM32F103 example projects
+│   ├── 001/                  # STM32 project template
+│   ├── 002/                  # FreeRTOS basic example
+│   ├── 003/                  # FreeRTOS LED blink example
+│   └── 004/                  # FreeRTOS static allocation example
+├── templates/                # Project templates
+│   └── README_template.md    # README template for examples
+├── CONTRIBUTING.md           # Contribution guidelines
+├── CHANGELOG.md              # Version history
+├── LICENSE                   # MIT License
+└── README.md/README_zh.md    # Project documentation
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-1. Clone the repository
-```bash
-git clone https://github.com/Despacito0o/FreeRTOS.git
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Despacito0o/FreeRTOS.git
+   ```
 
-2. Read documentation
-- View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
-- Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
-- Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
+2. **Read the documentation**
+   - View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
+   - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
+   - Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
+   - Browse all documents in the [documentation index](docs/README.md)
 
-3. Run examples
-- Go to [Despacito Basic Example](Despacito/002)
-- Go to [Despacito FreeRTOS LED Blink Example](Despacito/003)
-- Go to [Despacito FreeRTOS Static Allocation Example](Despacito/004)
-- Follow each project's README.md instructions for compilation and running
+3. **Run examples**
+   - Go to [STM32 Project Template](Despacito/001)
+   - Go to [FreeRTOS Basic Example](Despacito/002)
+   - Go to [FreeRTOS LED Blink Example](Despacito/003)
+   - Go to [FreeRTOS Static Allocation Example](Despacito/004)
+   - Follow each project's README for compilation and running instructions
 
 ---
 
 ## 📖 Documentation Navigation
 
-### Development Environment Setup
+### 📁 Core Documentation
+
 - [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
-  - Keil MDK installation and configuration
-  - STM32 standard peripheral library configuration
-  - Project creation and configuration
-  - Common problem solutions
-
-### FreeRTOS Porting
 - [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
-  - Source code acquisition and configuration
-  - Project file organization
-  - Porting steps
-  - Compilation and debugging
-
-### FreeRTOS Examples
 - [Creating a Simple FreeRTOS Project on STM32](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-  - FreeRTOS configuration
-  - Task creation
-  - LED blinking implementation
-  - Debugging and simulation
 
-### STM32 FreeRTOS Tutorials
-- [STM32上创建简单FreeRTOS程序详解](ScoreJudgment/STM32上创建简单FreeRTOS程序详解.md)
-  - FreeRTOS core principles
-  - Task scheduling and context switching
-  - Resource management and synchronization
-  - Interrupt handling and low power management
+### 📝 Project-related
+
+- [Documentation Index](docs/README.md) - Navigate all available documentation
+- [Contribution Guidelines](CONTRIBUTING.md) - How to contribute to this project
+- [Change Log](CHANGELOG.md) - Version history and changes
+
+### 🧠 Tutorials
+
+- [STM32上创建简单FreeRTOS程序详解](docs/zh/tutorials/STM32上创建简单FreeRTOS程序详解.md) - Creating a simple FreeRTOS program
+
+---
+
+## 🔍 Example Projects
+
+### 🟢 Despacito/001
+Basic STM32F103 project template with standard peripheral library.
+
+### 🟢 Despacito/002
+FreeRTOS basic example with task creation and simple functionality.
+
+### 🟢 Despacito/003
+FreeRTOS LED blink example - demonstrates task creation and scheduling with a simple LED blinking pattern.
+
+### 🟢 Despacito/004
+FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
 
 ---
 
 ## 🤝 Contributing
 
-Issues and Pull Requests are welcome to help improve this project. Before submitting, please ensure:
+Contributions are welcome to help improve this project. Please read our [Contribution Guidelines](CONTRIBUTING.md) before submitting any pull requests or issues.
 
-1. Code follows project coding standards
-2. Necessary comments and documentation are added
-3. Tests pass and no new issues are introduced
+Key points:
+- Fork the repository and create a feature branch
+- Follow code style and documentation standards
+- Test your changes thoroughly
+- Submit a pull request with a clear description
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
----
-
-## 🙏 Acknowledgments
-
-Thanks to all developers who have contributed to this project!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -129,6 +137,12 @@ Thanks to all developers who have contributed to this project!
 
 - [Despacito0o](https://github.com/Despacito0o) - FreeRTOS developer and tutorial creator
 - Visit my [CSDN Blog](https://blog.csdn.net/supershmily) for more embedded development content
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to all developers who have contributed to this project!
 
 ---
 
