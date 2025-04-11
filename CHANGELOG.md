@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file. Format is b
 ## [Unreleased]
 
 ### Added / 新增
+- 添加项目005：FreeRTOS工程完善(Despacito/005)
+- 添加串口通信功能支持
+- 添加printf调试输出功能
+- 添加静态内存分配支持
+- 添加优化的SysTick中断处理
+- 添加项目005的详细文档(docs/005_FreeRTOS_Project_Improvement.md)
 - 文档目录结构优化
 - 添加CONTRIBUTING.md贡献指南
 - 添加CHANGELOG.md变更日志
