@@ -1,8 +1,6 @@
 # FreeRTOS Project Improvement Guide: STM32 Series
 
 > This article is part of the FreeRTOS + STM32 development tutorial series. We will improve the previously ported FreeRTOS project by adding UART functionality and optimizing configuration files.
-> 
-> **For more quality resources, please visit my GitHub repository: [https://github.com/Despacito0o/FreeRTOS](https://github.com/Despacito0o/FreeRTOS)**
 
 ## Preparation
 
@@ -24,9 +22,8 @@ This file defines the macros and function declarations needed for STM32 UART com
 #include <stdio.h>
 
 /** 
-  * UART macro definitions, different UARTs are mounted on different buses and IOs, 
-  * these macros need to be modified during porting:
-  * 1-Modify the bus clock macro, uart1 is mounted on apb2 bus, other uarts on apb1 bus
+  * UART macro definitions. Different UARTs are attached to different buses and IOs, which need to be modified when porting:
+  * 1-Modify the bus clock macro; UART1 is attached to APB2 bus, other UARTs are attached to APB1 bus
   * 2-Modify GPIO macros
   */
 	
@@ -53,13 +50,13 @@ void USART_Config(void);
 
 ### Core Parts of usart.c
 
-This file implements UART initialization and printf function redirection:
+This file implements UART initialization and the redirection of the printf function:
 
 ```c
 #include "usart.h"
 
 /**
-  * @brief  Configure Nested Vector Interrupt Controller (NVIC)
+  * @brief  Configure the nested vectored interrupt controller NVIC
   * @param  None
   * @retval None
   */
@@ -67,18 +64,18 @@ static void NVIC_Configuration(void)
 {
   NVIC_InitTypeDef NVIC_InitStructure;
   
-  /* NVIC Group Selection */
+  /* Nested vectored interrupt controller group selection */
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
   
   /* Configure USART as interrupt source */
   NVIC_InitStructure.NVIC_IRQChannel = DEBUG_USART_IRQ;
-  /* Preemption Priority */
+  /* Preemption priority */
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-  /* Sub Priority */
+  /* Sub priority */
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
-  /* Enable Interrupt */
+  /* Enable interrupt */
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  /* Initialize NVIC configuration */
+  /* Initialize NVIC */
   NVIC_Init(&NVIC_InitStructure);
 }
 ```
@@ -91,7 +88,7 @@ FreeRTOSConfig.h is the core configuration file for FreeRTOS. By modifying these
 /**
  * @file FreeRTOSConfig.h
  * @author Despacito (https://github.com/Despacito0o/FreeRTOS)
- * @brief FreeRTOS Configuration File
+ * @brief FreeRTOS configuration file
  */
 
 #ifndef FREERTOS_CONFIG_H
@@ -99,11 +96,11 @@ FreeRTOSConfig.h is the core configuration file for FreeRTOS. By modifying these
  
 #include "stm32f10x.h"  // Device header file
  
-// Scheduler Configuration
+// Scheduler configuration
 #define configUSE_PREEMPTION                    1  // Enable preemptive scheduler
 #define configUSE_TICKLESS_IDLE                 1  // Enable low power tickless mode
  
-// Clock Configuration
+// Clock configuration
 #define configCPU_CLOCK_HZ                      (SystemCoreClock)  // CPU clock frequency
 #define configTICK_RATE_HZ                      ( ( TickType_t ) 1000 )  // System tick frequency
 #define configUSE_16_BIT_TICKS                  0  // Use 32-bit tick counter
@@ -113,39 +110,39 @@ FreeRTOSConfig.h is the core configuration file for FreeRTOS. By modifying these
 
 ### 1. Prepare a New Project
 
-Copy the 003 dynamic creation project template and rename it to 005, which will serve as our new project template.
+Copy the 003 dynamic task creation project template and rename it to 005, which will serve as our new project template.
 
-### 2. Replace FreeRTOSConfig.h File
+### 2. Replace FreeRTOSConfig.h
 
 Open the 005 project, navigate to the `...\Despacito\005\FreeRTOS` directory, and replace with our prepared FreeRTOSConfig.h file.
 
-### 3. Create Driver Folder
+### 3. Create a Driver Folder
 
 Navigate to `...\Desktop\Despacito\005` and create a new Driver folder.
 
 ### 4. Add UART Files
 
-Create a usart folder in the Driver folder to store the UART initialization files, and place usart.c and usart.h in this directory.
+Inside the Driver folder, create a usart folder to store UART initialization files, and place usart.c and usart.h in this directory.
 
 ### 5. Configure Project Include Paths
 
-Open the project, click on the Magic Wand -> C/C++(AC6) -> Include Paths -> ... add the paths and click OK -> OK.
+Open the project, click the magic wand -> C/C++(AC6) -> Include Paths -> ... and add the appropriate paths, then click OK -> OK.
 
-### 6. Add Driver Group and UART Files
+### 6. Add the Driver Group and UART Files
 
-Add the Driver group and UART initialization files, and organize them.
+Add the Driver group along with the UART initialization files, organize them, and click OK.
 
 ### 7. Modify main.c
 
-Add the `#include "usart.h"` header file to main.c and call the UART initialization function `USART_Config()`.
+Add the `#include "usart.h"` header to main.c and call the UART initialization function `USART_Config()`.
 
 ### 8. Handle Static Memory Allocation Issues
 
-After compilation, we found errors because we enabled static memory allocation but didn't implement the related functions. There are two solutions:
+When compiling, you may encounter errors because we enabled static memory allocation but didn't implement the related functions. There are two solutions:
 1. Change `configSUPPORT_STATIC_ALLOCATION` to 0
-2. Implement the related functions ourselves
+2. Implement the required functions ourselves
 
-We choose option 2, copying the static task creation function from the 004 project:
+We choose option 2 and copy the static task creation function from the 004 project:
 
 ```c
 StaticTask_t        IdleTaskTCB;
@@ -162,10 +159,10 @@ void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
 
 ### 9. Optimize SysTick Interrupt Handling
 
-Earlier, we commented out the `xPortSysTickHandler` definition in FreeRTOSConfig.h. Now we need to standardize SysTick interrupt handling:
+Earlier, we commented out the `xPortSysTickHandler` definition in FreeRTOSConfig.h. Now we need to standardize the SysTick interrupt handling:
 
-1. Open port.c, find the xPortSysTickHandler function
-2. Modify the SysTick_Handler function in stm32f10x_it.c, adding FreeRTOS scheduler-related code:
+1. Open port.c and find the xPortSysTickHandler function
+2. Modify the SysTick_Handler function in stm32f10x_it.c by adding FreeRTOS scheduling related code:
 
 ```c
 #include "stm32f10x_it.h"
@@ -185,15 +182,15 @@ void SysTick_Handler(void)
 
 ### 10. Final Compilation
 
-After completing the steps above, our project can conveniently use macro configuration and printf to print information.
+After completing the above steps, our project can now conveniently use macro configurations and printf for printing information.
 
-## Conclusion
+## Summary
 
 Through the steps in this article, we have successfully improved the FreeRTOS project by adding:
 
-1. Complete FreeRTOSConfig.h configuration file
+1. A complete FreeRTOSConfig.h configuration file
 2. UART communication functionality
-3. Printf debugging output functionality
+3. Printf debugging output
 4. More standardized interrupt handling
 
-These improvements make our FreeRTOS project more robust and practical, laying a good foundation for the subsequent development of complex applications. 
+These improvements make our FreeRTOS project more robust and practical, laying a solid foundation for developing complex applications in the future. 

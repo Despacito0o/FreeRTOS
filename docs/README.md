@@ -17,7 +17,7 @@
 - [STM32标准库开发环境搭建教程](zh/STM32标准库开发环境搭建教程.md) - 详细介绍如何设置STM32开发环境
 - [FreeRTOS移植详解](zh/FreeRTOS移植详解.md) - 介绍如何将FreeRTOS移植到STM32平台
 - [FreeRTOS移植详解-003](zh/FreeRTOS移植详解-003.md) - 基于STM32F103的FreeRTOS移植实践
-- [FreeRTOS工程完善指南](005_FreeRTOS_Project_Improvement.md) - 完善FreeRTOS工程，添加串口功能并优化配置
+- [FreeRTOS工程完善指南](zh/FreeRTOS工程完善指南.md) - 完善FreeRTOS工程，添加串口和优化配置
 
 ### 💡 教程
 
@@ -34,7 +34,7 @@ This directory contains documentation about FreeRTOS embedded system development
 - [STM32 Development Environment Setup](en/STM32-Dev-Environment-Setup.md) - Detailed guide on setting up STM32 development environment
 - [FreeRTOS Porting Guide](en/FreeRTOS-Port-Guide.md) - Guide on porting FreeRTOS to STM32 platform
 - [Creating a Simple FreeRTOS Project on STM32](en/Creating-Simple-FreeRTOS-Project-on-STM32.md) - Creating a FreeRTOS project from scratch on STM32
-- [FreeRTOS Project Improvement Guide](005_FreeRTOS_Project_Improvement.md) - Improve FreeRTOS project with UART functionality and optimized configuration
+- [FreeRTOS Project Improvement Guide](en/FreeRTOS-Project-Improvement-Guide.md) - Improving FreeRTOS projects with UART and optimized configurations
 
 ### 💡 Tutorials
 
@@ -47,17 +47,18 @@ This directory contains documentation about FreeRTOS embedded system development
 ```
 docs/
 ├── README.md                  # 本文件 / This file
-├── 005_FreeRTOS_Project_Improvement.md # FreeRTOS工程完善指南
 ├── en/                        # 英文文档 / English documentation
 │   ├── FreeRTOS-Port-Guide.md
 │   ├── STM32-Dev-Environment-Setup.md
 │   ├── Creating-Simple-FreeRTOS-Project-on-STM32.md
+│   ├── FreeRTOS-Project-Improvement-Guide.md
 │   └── tutorials/             # 英文教程 / English tutorials
 │       └── ...
 └── zh/                        # 中文文档 / Chinese documentation
     ├── FreeRTOS移植详解.md
     ├── STM32标准库开发环境搭建教程.md
     ├── FreeRTOS移植详解-003.md
+    ├── FreeRTOS工程完善指南.md
     └── tutorials/             # 中文教程 / Chinese tutorials
         └── STM32上创建简单FreeRTOS程序详解.md
 ``` 

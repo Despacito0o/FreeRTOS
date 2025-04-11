@@ -1,8 +1,6 @@
 # FreeRTOS项目工程完善指南：STM32系列
 
 > 本文是FreeRTOS + STM32开发系列教程的一部分。我们将完善之前移植的FreeRTOS工程，添加串口功能并优化配置文件。
-> 
-> **更多优质资源，请访问我的GitHub仓库：[https://github.com/Despacito0o/FreeRTOS](https://github.com/Despacito0o/FreeRTOS)**
 
 ## 准备工作
 
