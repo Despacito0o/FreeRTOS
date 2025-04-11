@@ -46,7 +46,8 @@ FreeRTOS/
 │   ├── 001/                  # STM32项目模板
 │   ├── 002/                  # FreeRTOS基础示例
 │   ├── 003/                  # FreeRTOS LED闪烁示例
-│   └── 004/                  # FreeRTOS静态内存分配示例
+│   ├── 004/                  # FreeRTOS静态内存分配示例
+│   └── 005/                  # FreeRTOS工程完善（串口+配置优化）
 ├── templates/                # 项目模板
 │   └── README_template.md    # 示例项目README模板
 ├── CONTRIBUTING.md           # 贡献指南
@@ -68,6 +69,7 @@ FreeRTOS/
    - 查看 [STM32开发环境搭建指南](docs/zh/STM32标准库开发环境搭建教程.md)
    - 学习 [FreeRTOS移植详解](docs/zh/FreeRTOS移植详解.md)
    - 跟随 [创建简单FreeRTOS程序详解](docs/zh/FreeRTOS移植详解-003.md)
+   - 阅读 [FreeRTOS工程完善指南](docs/005_FreeRTOS_Project_Improvement.md)
    - 浏览[文档索引](docs/README.md)中的所有文档
 
 3. **运行示例**
@@ -75,6 +77,7 @@ FreeRTOS/
    - 进入 [FreeRTOS基础示例](Despacito/002)
    - 进入 [FreeRTOS LED闪烁示例](Despacito/003)
    - 进入 [FreeRTOS静态内存分配示例](Despacito/004)
+   - 进入 [FreeRTOS工程完善示例](Despacito/005)
    - 按照每个项目的README进行编译和运行
 
 ---
@@ -86,6 +89,7 @@ FreeRTOS/
 - [STM32开发环境搭建指南](docs/zh/STM32标准库开发环境搭建教程.md)
 - [FreeRTOS移植详解](docs/zh/FreeRTOS移植详解.md)
 - [创建简单FreeRTOS程序详解](docs/zh/FreeRTOS移植详解-003.md)
+- [FreeRTOS工程完善指南](docs/005_FreeRTOS_Project_Improvement.md)
 
 ### 📝 项目相关
 
@@ -112,6 +116,9 @@ FreeRTOS LED闪烁示例 - 演示任务创建和调度，实现简单的LED闪�
 
 ### 🟢 Despacito/004
 FreeRTOS静态内存分配示例 - 演示如何使用静态内存分配方式创建任务，适用于资源受限的系统。
+
+### 🟢 Despacito/005
+FreeRTOS工程完善示例 - 添加串口通信功能、printf调试输出、优化FreeRTOS配置，使工程更加健壮和实用。
 
 ---
 

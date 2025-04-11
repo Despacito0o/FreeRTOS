@@ -46,7 +46,8 @@ FreeRTOS/
 │   ├── 001/                  # STM32 project template
 │   ├── 002/                  # FreeRTOS basic example
 │   ├── 003/                  # FreeRTOS LED blink example
-│   └── 004/                  # FreeRTOS static allocation example
+│   ├── 004/                  # FreeRTOS static allocation example
+│   └── 005/                  # FreeRTOS project improvement (UART+config optimization)
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -68,6 +69,7 @@ FreeRTOS/
    - View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
    - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
    - Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
+   - Read [FreeRTOS Project Improvement Guide](docs/005_FreeRTOS_Project_Improvement.md)
    - Browse all documents in the [documentation index](docs/README.md)
 
 3. **Run examples**
@@ -75,6 +77,7 @@ FreeRTOS/
    - Go to [FreeRTOS Basic Example](Despacito/002)
    - Go to [FreeRTOS LED Blink Example](Despacito/003)
    - Go to [FreeRTOS Static Allocation Example](Despacito/004)
+   - Go to [FreeRTOS Project Improvement Example](Despacito/005)
    - Follow each project's README for compilation and running instructions
 
 ---
@@ -86,6 +89,7 @@ FreeRTOS/
 - [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
 - [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
 - [Creating a Simple FreeRTOS Project on STM32](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
+- [FreeRTOS Project Improvement Guide](docs/005_FreeRTOS_Project_Improvement.md)
 
 ### 📝 Project-related
 
@@ -112,6 +116,9 @@ FreeRTOS LED blink example - demonstrates task creation and scheduling with a si
 
 ### 🟢 Despacito/004
 FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
+
+### 🟢 Despacito/005
+FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.
 
 ---
 
@@ -162,6 +169,9 @@ FreeRTOS LED blink example - demonstrates task creation and scheduling with a si
 
 #### Despacito/004
 FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
+
+#### Despacito/005
+FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.
 
 ---
 
