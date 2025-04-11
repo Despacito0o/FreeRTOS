@@ -33,20 +33,24 @@ FreeRTOS/
 ├── docs/                     # Documentation
 │   ├── README.md             # Documentation index
 │   ├── en/                   # English documentation
-│   │   ├── FreeRTOS-Port-Guide.md
-│   │   ├── STM32-Dev-Environment-Setup.md
-│   │   ├── Creating-Simple-FreeRTOS-Project-on-STM32.md
+│   │   ├── 001-STM32-Development-Environment-Setup.md
+│   │   ├── 002-FreeRTOS-Port-to-Keil6.md
+│   │   ├── 003-FreeRTOS-Dynamic-Task-Creation.md
+│   │   ├── 004-FreeRTOS-Static-Task-Creation.md
+│   │   ├── 005-FreeRTOS-Project-Improvement-Guide.md
 │   │   └── tutorials/        # English tutorials
 │   └── zh/                   # Chinese documentation
-│       ├── FreeRTOS移植详解.md
-│       ├── STM32标准库开发环境搭建教程.md
-│       ├── FreeRTOS移植详解-003.md
+│       ├── 001-STM32标准库开发环境搭建教程.md
+│       ├── 002-FreeRTOS移植到keil6.md
+│       ├── 003-FreeRTOS动态任务创建.md
+│       ├── 004-FreeRTOS静态任务创建.md
+│       ├── 005-FreeRTOS项目工程完善指南.md
 │       └── tutorials/        # Chinese tutorials
 ├── Despacito/                # STM32F103 example projects
 │   ├── 001/                  # STM32 project template
 │   ├── 002/                  # FreeRTOS basic example
-│   ├── 003/                  # FreeRTOS LED blink example
-│   ├── 004/                  # FreeRTOS static allocation example
+│   ├── 003/                  # FreeRTOS dynamic task creation
+│   ├── 004/                  # FreeRTOS static task creation
 │   └── 005/                  # FreeRTOS project improvement (UART+config optimization)
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
@@ -66,17 +70,18 @@ FreeRTOS/
    ```
 
 2. **Read the documentation**
-   - View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
-   - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
-   - Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-   - Read [FreeRTOS Project Improvement Guide](docs/en/FreeRTOS-Project-Improvement-Guide.md)
+   - View [001-STM32 Development Environment Setup](docs/en/001-STM32-Development-Environment-Setup.md)
+   - Learn [002-FreeRTOS Port to Keil6](docs/en/002-FreeRTOS-Port-to-Keil6.md)
+   - Follow [003-FreeRTOS Dynamic Task Creation](docs/en/003-FreeRTOS-Dynamic-Task-Creation.md)
+   - Learn [004-FreeRTOS Static Task Creation](docs/en/004-FreeRTOS-Static-Task-Creation.md)
+   - Read [005-FreeRTOS Project Improvement Guide](docs/en/005-FreeRTOS-Project-Improvement-Guide.md)
    - Browse all documents in the [documentation index](docs/README.md)
 
 3. **Run examples**
    - Go to [STM32 Project Template](Despacito/001)
    - Go to [FreeRTOS Basic Example](Despacito/002)
-   - Go to [FreeRTOS LED Blink Example](Despacito/003)
-   - Go to [FreeRTOS Static Allocation Example](Despacito/004)
+   - Go to [FreeRTOS Dynamic Task Creation](Despacito/003)
+   - Go to [FreeRTOS Static Task Creation](Despacito/004)
    - Go to [FreeRTOS Project Improvement Example](Despacito/005)
    - Follow each project's README for compilation and running instructions
 
@@ -86,10 +91,11 @@ FreeRTOS/
 
 ### 📁 Core Documentation
 
-- [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
-- [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
-- [Creating a Simple FreeRTOS Project on STM32](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-- [FreeRTOS Project Improvement Guide](docs/en/FreeRTOS-Project-Improvement-Guide.md)
+- [001-STM32 Development Environment Setup](docs/en/001-STM32-Development-Environment-Setup.md)
+- [002-FreeRTOS Port to Keil6](docs/en/002-FreeRTOS-Port-to-Keil6.md)
+- [003-FreeRTOS Dynamic Task Creation](docs/en/003-FreeRTOS-Dynamic-Task-Creation.md)
+- [004-FreeRTOS Static Task Creation](docs/en/004-FreeRTOS-Static-Task-Creation.md)
+- [005-FreeRTOS Project Improvement Guide](docs/en/005-FreeRTOS-Project-Improvement-Guide.md)
 
 ### 📝 Project-related
 
@@ -99,7 +105,7 @@ FreeRTOS/
 
 ### 🧠 Tutorials
 
-- [STM32上创建简单FreeRTOS程序详解](docs/zh/tutorials/STM32上创建简单FreeRTOS程序详解.md) - Creating a simple FreeRTOS program
+- [Creating a Simple FreeRTOS Project on STM32](docs/en/tutorials/Creating-Simple-FreeRTOS-Project-on-STM32.md) - Creating a simple FreeRTOS program from scratch
 
 ---
 
@@ -112,10 +118,10 @@ Basic STM32F103 project template with standard peripheral library.
 FreeRTOS basic example with task creation and simple functionality.
 
 ### 🟢 Despacito/003
-FreeRTOS LED blink example - demonstrates task creation and scheduling with a simple LED blinking pattern.
+FreeRTOS dynamic task creation example - demonstrates task creation and scheduling with a simple LED blinking pattern.
 
 ### 🟢 Despacito/004
-FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
+FreeRTOS static task creation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
 
 ### 🟢 Despacito/005
 FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.
@@ -165,10 +171,10 @@ Basic STM32F103 project template with standard peripheral library.
 FreeRTOS basic example.
 
 #### Despacito/003
-FreeRTOS LED blink example - demonstrates task creation and scheduling with a simple LED blinking pattern.
+FreeRTOS dynamic task creation example - demonstrates task creation and scheduling with a simple LED blinking pattern.
 
 #### Despacito/004
-FreeRTOS static memory allocation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
+FreeRTOS static task creation example - demonstrates how to create tasks using static memory allocation method, suitable for resource-constrained systems.
 
 #### Despacito/005
 FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.

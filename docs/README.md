@@ -40,7 +40,7 @@ This directory contains documentation about FreeRTOS embedded system development
 
 ### 💡 Tutorials
 
-- *Coming soon*
+- [Creating a Simple FreeRTOS Project on STM32](en/tutorials/Creating-Simple-FreeRTOS-Project-on-STM32.md) - Creating a FreeRTOS program from scratch
 
 ---
 
@@ -56,7 +56,7 @@ docs/
 │   ├── 004-FreeRTOS-Static-Task-Creation.md
 │   ├── 005-FreeRTOS-Project-Improvement-Guide.md
 │   └── tutorials/             # 英文教程 / English tutorials
-│       └── ...
+│       └── Creating-Simple-FreeRTOS-Project-on-STM32.md
 └── zh/                        # 中文文档 / Chinese documentation
     ├── 001-STM32标准库开发环境搭建教程.md
     ├── 002-FreeRTOS移植到keil6.md

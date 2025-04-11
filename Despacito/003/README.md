@@ -1,111 +1,144 @@
-# FreeRTOS LED Blink Example for STM32F103
+# FreeRTOS动态任务创建 / FreeRTOS Dynamic Task Creation
 
-This project demonstrates a basic implementation of FreeRTOS on an STM32F103 microcontroller. It creates a simple task that blinks an LED connected to pin PC13 at a 500ms interval.
+<div align="center">
 
-## Project Overview
+[English](#english) | [中文](#中文)
 
-This project serves as a minimal working example of FreeRTOS on STM32, showing:
-- FreeRTOS task creation and scheduling
-- LED control via GPIO
-- FreeRTOS task delay for timing control
+</div>
 
-## Hardware Requirements
+---
 
-- STM32F103C8 development board (Blue Pill or similar)
-- ST-Link V2 programmer (for hardware deployment)
-- LED connected to PC13 (typically built into most STM32F103 boards)
+## 中文
 
-## Software Requirements
+### 📖 项目简介
 
-- Keil MDK 5.x or higher
-- STM32 Standard Peripheral Library
-- FreeRTOS kernel files (included in project)
+本项目演示了FreeRTOS中动态任务创建的方法和基本原理，通过多个LED控制任务展示任务调度功能。
 
-## Project Structure
+### ✨ 功能特点
 
-- `/FreeRTOS` - Contains the FreeRTOS kernel source and port files
-- `/Library` - STM32 Standard Peripheral Library
-- `/Start` - Startup and system files
-- `/User` - Application code including main.c
+- 动态内存分配创建FreeRTOS任务
+- 多任务并行执行示例
+- 任务优先级调度演示
+- 任务间通信基础
 
-## Key Files
+### 🔧 硬件要求
 
-- `User/main.c` - Contains the application code with LED blink task
-- `FreeRTOS/inc` - FreeRTOS header files
-- `FreeRTOS/src` - FreeRTOS source files
-- `FreeRTOS/port` - ARM Cortex-M3 port files
+- 开发板：STM32F103C8T6
+- 外设：板载LED（PC13）及外接LED
+- 调试器：ST-Link
 
-## How It Works
+### 🛠️ 开发环境
 
-1. The system initializes the GPIO for the LED
-2. A FreeRTOS task is created that controls the LED
-3. The FreeRTOS scheduler is started
-4. The task alternates the LED state with 500ms delays between transitions
+- IDE：Keil MDK 5.x / 6.x
+- 编译器：ARM Compiler 5/6
+- 库：
+  - STM32标准外设库 (StdPeriph)
+  - FreeRTOS V10.0.1
 
-## Key Code
+### 📂 项目结构
 
-```c
-TaskHandle_t myTaskHandler;
-
-void myTask(void *arg)
-{
-    while(1)
-    {
-        GPIO_ResetBits(GPIOC, GPIO_Pin_13);  // LED on
-        vTaskDelay(500);                     // Delay 500 clock ticks
-        GPIO_SetBits(GPIOC, GPIO_Pin_13);    // LED off
-        vTaskDelay(500);                     // Delay 500 clock ticks
-    }
-}
-
-int main(void)
-{
-    // Initialize GPIO
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-    
-    GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOC, &GPIO_InitStructure);
-    
-    // Create FreeRTOS task
-    xTaskCreate(myTask, "myTask", 128, NULL, 2, &myTaskHandler);
-    
-    // Start scheduler
-    vTaskStartScheduler();
-    
-    // Should never reach here
-    while(1);
-}
+```
+Despacito003/
+├── Start/               # 启动文件
+├── Library/             # 标准库文件
+├── User/                # 用户代码
+├── FreeRTOS/            # FreeRTOS源码
+│   ├── inc/             # FreeRTOS头文件
+│   ├── src/             # FreeRTOS源文件
+│   └── port/            # 移植文件
+├── Objects/             # 编译生成的目标文件
+└── Listings/            # 编译生成的列表文件
 ```
 
-## Building and Running
+### 🚀 使用方法
 
-1. Open the project in Keil MDK
-2. Build the project (F7 or Build button)
-3. Connect your STM32 board via ST-Link
-4. Flash the program (F8 or Load button)
-5. The LED should start blinking with 500ms on/off intervals
+1. 打开项目：使用Keil MDK打开项目文件
+2. 编译项目：点击"Build"按钮
+3. 下载程序：连接ST-Link，点击"Download"按钮将程序下载到开发板
+4. 观察结果：多个LED将以不同频率闪烁，展示多任务并行执行
 
-## Simulation
+### 📝 代码示例
 
-If you don't have the hardware, you can simulate this project:
+```c
+// 动态创建LED任务
+xTaskCreate((TaskFunction_t )led_task,          // 任务函数
+            (const char*    )"led_task",        // 任务名称
+            (uint16_t       )128,               // 任务堆栈大小
+            (void*          )NULL,              // 传递给任务的参数
+            (UBaseType_t    )3,                 // 任务优先级
+            (TaskHandle_t*  )&LEDTask_Handler); // 任务句柄
+```
 
-1. Open the project in Keil MDK
-2. Click on the Magic Wand icon (Debug button)
-3. Select "Use Simulator"
-4. Set Dialog DLL to DARMSTM.DLL and Parameter to -PSTM32F103C8
-5. Start debugging and open the Logic Analyzer
-6. Add portc.13 as a monitoring variable
-7. Set the display type to "bit"
-8. Run the simulation and observe the LED state changes
+### 📚 相关文档
 
-## Further Documentation
+- [FreeRTOS动态任务创建](../../docs/zh/003-FreeRTOS动态任务创建.md)
 
-For a detailed explanation of this project, see:
-- [Creating a Simple FreeRTOS Project on STM32 (English)](../../docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-- [STM32上创建简单FreeRTOS程序详解 (Chinese)](../../docs/zh/FreeRTOS移植详解-003.md)
+---
+
+## English
+
+### 📖 Project Description
+
+This project demonstrates the methods and basic principles of dynamic task creation in FreeRTOS, showcasing task scheduling functionality through multiple LED control tasks.
+
+### ✨ Features
+
+- FreeRTOS task creation using dynamic memory allocation
+- Multi-task parallel execution example
+- Task priority scheduling demonstration
+- Basic inter-task communication
+
+### 🔧 Hardware Requirements
+
+- Development Board: STM32F103C8T6
+- Peripherals: Onboard LED (PC13) and external LEDs
+- Debugger: ST-Link
+
+### 🛠️ Development Environment
+
+- IDE: Keil MDK 5.x / 6.x
+- Compiler: ARM Compiler 5/6
+- Libraries:
+  - STM32 Standard Peripheral Library (StdPeriph)
+  - FreeRTOS V10.0.1
+
+### 📂 Project Structure
+
+```
+Despacito003/
+├── Start/               # Startup files
+├── Library/             # Standard library files
+├── User/                # User code
+├── FreeRTOS/            # FreeRTOS source code
+│   ├── inc/             # FreeRTOS header files
+│   ├── src/             # FreeRTOS source files
+│   └── port/            # Port files
+├── Objects/             # Compiled object files
+└── Listings/            # Compiled listing files
+```
+
+### 🚀 Usage
+
+1. Open project: Use Keil MDK to open the project file
+2. Compile project: Click the "Build" button
+3. Download program: Connect ST-Link, click the "Download" button to download the program to the development board
+4. Observe result: Multiple LEDs will blink at different frequencies, demonstrating parallel task execution
+
+### 📝 Code Example
+
+```c
+// Dynamically create LED task
+xTaskCreate((TaskFunction_t )led_task,          // Task function
+            (const char*    )"led_task",        // Task name
+            (uint16_t       )128,               // Task stack size
+            (void*          )NULL,              // Parameters passed to the task
+            (UBaseType_t    )3,                 // Task priority
+            (TaskHandle_t*  )&LEDTask_Handler); // Task handle
+```
+
+### 📚 Related Documentation
+
+- [FreeRTOS Dynamic Task Creation](../../docs/en/003-FreeRTOS-Dynamic-Task-Creation.md)
 
 ## License
 
