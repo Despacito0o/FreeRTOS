@@ -69,7 +69,7 @@ FreeRTOS/
    - View [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
    - Learn [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
    - Follow [Creating a Simple FreeRTOS Project](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-   - Read [FreeRTOS Project Improvement Guide](docs/005_FreeRTOS_Project_Improvement.md)
+   - Read [FreeRTOS Project Improvement Guide](docs/en/FreeRTOS-Project-Improvement-Guide.md)
    - Browse all documents in the [documentation index](docs/README.md)
 
 3. **Run examples**
@@ -89,7 +89,7 @@ FreeRTOS/
 - [STM32 Development Environment Setup Guide](docs/en/STM32-Dev-Environment-Setup.md)
 - [FreeRTOS Porting Guide](docs/en/FreeRTOS-Port-Guide.md)
 - [Creating a Simple FreeRTOS Project on STM32](docs/en/Creating-Simple-FreeRTOS-Project-on-STM32.md)
-- [FreeRTOS Project Improvement Guide](docs/005_FreeRTOS_Project_Improvement.md)
+- [FreeRTOS Project Improvement Guide](docs/en/FreeRTOS-Project-Improvement-Guide.md)
 
 ### 📝 Project-related
 

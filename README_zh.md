@@ -69,7 +69,7 @@ FreeRTOS/
    - 查看 [STM32开发环境搭建指南](docs/zh/STM32标准库开发环境搭建教程.md)
    - 学习 [FreeRTOS移植详解](docs/zh/FreeRTOS移植详解.md)
    - 跟随 [创建简单FreeRTOS程序详解](docs/zh/FreeRTOS移植详解-003.md)
-   - 阅读 [FreeRTOS工程完善指南](docs/005_FreeRTOS_Project_Improvement.md)
+   - 阅读 [FreeRTOS工程完善指南](docs/zh/FreeRTOS工程完善指南.md)
    - 浏览[文档索引](docs/README.md)中的所有文档
 
 3. **运行示例**
@@ -89,7 +89,7 @@ FreeRTOS/
 - [STM32开发环境搭建指南](docs/zh/STM32标准库开发环境搭建教程.md)
 - [FreeRTOS移植详解](docs/zh/FreeRTOS移植详解.md)
 - [创建简单FreeRTOS程序详解](docs/zh/FreeRTOS移植详解-003.md)
-- [FreeRTOS工程完善指南](docs/005_FreeRTOS_Project_Improvement.md)
+- [FreeRTOS工程完善指南](docs/zh/FreeRTOS工程完善指南.md)
 
 ### 📝 项目相关
 
