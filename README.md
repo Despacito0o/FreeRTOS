@@ -51,7 +51,8 @@ FreeRTOS/
 │   ├── 002/                  # FreeRTOS basic example
 │   ├── 003/                  # FreeRTOS dynamic task creation
 │   ├── 004/                  # FreeRTOS static task creation
-│   └── 005/                  # FreeRTOS project improvement (UART+config optimization)
+│   ├── 005/                  # FreeRTOS project improvement (UART+config optimization)
+│   └── 006/                  # FreeRTOS multi-task creation and deletion
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -83,6 +84,7 @@ FreeRTOS/
    - Go to [FreeRTOS Dynamic Task Creation](Despacito/003)
    - Go to [FreeRTOS Static Task Creation](Despacito/004)
    - Go to [FreeRTOS Project Improvement Example](Despacito/005)
+   - Go to [FreeRTOS Multi-Task Creation and Deletion](Despacito/006)
    - Follow each project's README for compilation and running instructions
 
 ---
@@ -125,6 +127,9 @@ FreeRTOS static task creation example - demonstrates how to create tasks using s
 
 ### 🟢 Despacito/005
 FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.
+
+### 🟢 Despacito/006
+FreeRTOS multi-task creation and deletion example - demonstrates how to dynamically create, manage and delete tasks, shows the impact of task priorities on system behavior, and includes useful methods for task state monitoring.
 
 ---
 
@@ -178,6 +183,9 @@ FreeRTOS static task creation example - demonstrates how to create tasks using s
 
 #### Despacito/005
 FreeRTOS project improvement example - adds UART communication, printf debugging output, and optimized FreeRTOS configuration, making the project more robust and practical for developing complex applications.
+
+#### Despacito/006
+FreeRTOS multi-task creation and deletion example - demonstrates how to dynamically create, manage and delete tasks, shows the impact of task priorities on system behavior, and includes useful methods for task state monitoring.
 
 ---
 

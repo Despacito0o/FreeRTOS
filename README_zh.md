@@ -51,7 +51,8 @@ FreeRTOS/
 │   ├── 002/                  # FreeRTOS基础示例
 │   ├── 003/                  # FreeRTOS动态任务创建
 │   ├── 004/                  # FreeRTOS静态任务创建
-│   └── 005/                  # FreeRTOS工程完善（串口+配置优化）
+│   ├── 005/                  # FreeRTOS工程完善（串口+配置优化）
+│   └── 006/                  # FreeRTOS多任务创建与删除
 ├── templates/                # 项目模板
 │   └── README_template.md    # 示例项目README模板
 ├── CONTRIBUTING.md           # 贡献指南
@@ -83,6 +84,7 @@ FreeRTOS/
    - 进入 [FreeRTOS动态任务创建](Despacito/003)
    - 进入 [FreeRTOS静态任务创建](Despacito/004)
    - 进入 [FreeRTOS工程完善示例](Despacito/005)
+   - 进入 [FreeRTOS多任务创建与删除](Despacito/006)
    - 按照每个项目的README进行编译和运行
 
 ---
@@ -125,6 +127,9 @@ FreeRTOS静态任务创建示例 - 演示如何使用静态内存分配方式创
 
 ### 🟢 Despacito/005
 FreeRTOS工程完善示例 - 添加串口通信功能、printf调试输出、优化FreeRTOS配置，使工程更加健壮和实用。
+
+### 🟢 Despacito/006
+FreeRTOS多任务创建与删除示例 - 演示如何动态创建、管理和删除任务，展示任务优先级对系统行为的影响，以及任务状态监控的实用方法。
 
 ---
 
