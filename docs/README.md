@@ -19,6 +19,7 @@
 - [003-FreeRTOS动态任务创建](zh/003-FreeRTOS动态任务创建.md) - 基于STM32F103的FreeRTOS动态任务创建
 - [004-FreeRTOS静态任务创建](zh/004-FreeRTOS静态任务创建.md) - 使用静态内存分配方式创建FreeRTOS任务
 - [005-FreeRTOS项目工程完善指南](zh/005-FreeRTOS项目工程完善指南.md) - 完善FreeRTOS工程，添加串口和优化配置
+- [006-FreeRTOS多任务创建与删除](zh/006-FreeRTOS多任务创建与删除.md) - 介绍FreeRTOS多任务的创建、管理和删除机制
 
 ### 💡 教程
 
@@ -37,6 +38,7 @@ This directory contains documentation about FreeRTOS embedded system development
 - [003-FreeRTOS Dynamic Task Creation](en/003-FreeRTOS-Dynamic-Task-Creation.md) - Creating dynamic tasks in FreeRTOS
 - [004-FreeRTOS Static Task Creation](en/004-FreeRTOS-Static-Task-Creation.md) - Creating tasks using static memory allocation
 - [005-FreeRTOS Project Improvement Guide](en/005-FreeRTOS-Project-Improvement-Guide.md) - Improving FreeRTOS projects with UART and optimized configurations
+- [006-FreeRTOS Multi-Task Creation and Deletion](en/006-FreeRTOS-Multi-Task-Creation-and-Deletion.md) - Creating, managing and deleting multiple tasks in FreeRTOS
 
 ### 💡 Tutorials
 
@@ -55,6 +57,7 @@ docs/
 │   ├── 003-FreeRTOS-Dynamic-Task-Creation.md
 │   ├── 004-FreeRTOS-Static-Task-Creation.md
 │   ├── 005-FreeRTOS-Project-Improvement-Guide.md
+│   ├── 006-FreeRTOS-Multi-Task-Creation-and-Deletion.md
 │   └── tutorials/             # 英文教程 / English tutorials
 │       └── Creating-Simple-FreeRTOS-Project-on-STM32.md
 └── zh/                        # 中文文档 / Chinese documentation
@@ -63,6 +66,7 @@ docs/
     ├── 003-FreeRTOS动态任务创建.md
     ├── 004-FreeRTOS静态任务创建.md
     ├── 005-FreeRTOS项目工程完善指南.md
+    ├── 006-FreeRTOS多任务创建与删除.md
     └── tutorials/             # 中文教程 / Chinese tutorials
         └── STM32上创建简单FreeRTOS程序详解.md
 ``` 
