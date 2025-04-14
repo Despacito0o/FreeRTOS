@@ -7,6 +7,9 @@ All notable changes to this project will be documented in this file. Format is b
 ## [Unreleased]
 
 ### Added / 新增
+- 添加项目007：FreeRTOS任务参数示例(Despacito/007)
+- 添加任务参数的详细文档(docs/zh/007-FreeRTOS任务参数详解与实践.md, docs/en/007-FreeRTOS-Task-Parameters-Explained.md)
+- 添加项目006：FreeRTOS多任务创建与删除(Despacito/006)
 - 添加项目005：FreeRTOS工程完善(Despacito/005)
 - 添加串口通信功能支持
 - 添加printf调试输出功能

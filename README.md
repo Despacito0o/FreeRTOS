@@ -52,7 +52,8 @@ FreeRTOS/
 │   ├── 003/                  # FreeRTOS dynamic task creation
 │   ├── 004/                  # FreeRTOS static task creation
 │   ├── 005/                  # FreeRTOS project improvement (UART+config optimization)
-│   └── 006/                  # FreeRTOS multi-task creation and deletion
+│   ├── 006/                  # FreeRTOS multi-task creation and deletion
+│   └── 007/                  # FreeRTOS task parameters example
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -85,6 +86,7 @@ FreeRTOS/
    - Go to [FreeRTOS Static Task Creation](Despacito/004)
    - Go to [FreeRTOS Project Improvement Example](Despacito/005)
    - Go to [FreeRTOS Multi-Task Creation and Deletion](Despacito/006)
+   - Go to [FreeRTOS Task Parameters Example](Despacito/007)
    - Follow each project's README for compilation and running instructions
 
 ---
@@ -130,6 +132,9 @@ FreeRTOS project improvement example - adds UART communication, printf debugging
 
 ### 🟢 Despacito/006
 FreeRTOS multi-task creation and deletion example - demonstrates how to dynamically create, manage and delete tasks, shows the impact of task priorities on system behavior, and includes useful methods for task state monitoring.
+
+### 🟢 Despacito/007
+FreeRTOS task parameters example - demonstrates how to use task parameters to make task functions more flexible and reusable, showing how to pass different types of data to tasks using the void pointer parameter.
 
 ---
 
@@ -186,6 +191,9 @@ FreeRTOS project improvement example - adds UART communication, printf debugging
 
 #### Despacito/006
 FreeRTOS multi-task creation and deletion example - demonstrates how to dynamically create, manage and delete tasks, shows the impact of task priorities on system behavior, and includes useful methods for task state monitoring.
+
+#### Despacito/007
+FreeRTOS task parameters example - demonstrates how to use task parameters to make task functions more flexible and reusable, showing how to pass different types of data to tasks using the void pointer parameter.
 
 ---
 
