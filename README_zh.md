@@ -53,7 +53,8 @@ FreeRTOS/
 │   ├── 004/                  # FreeRTOS静态任务创建
 │   ├── 005/                  # FreeRTOS工程完善（串口+配置优化）
 │   ├── 006/                  # FreeRTOS多任务创建与删除
-│   └── 007/                  # FreeRTOS任务参数示例
+│   ├── 007/                  # FreeRTOS任务参数示例
+│   └── 008/                  # FreeRTOS队列通信示例
 ├── templates/                # 项目模板
 │   └── README_template.md    # 示例项目README模板
 ├── CONTRIBUTING.md           # 贡献指南
@@ -87,6 +88,7 @@ FreeRTOS/
    - 进入 [FreeRTOS工程完善示例](Despacito/005)
    - 进入 [FreeRTOS多任务创建与删除](Despacito/006)
    - 进入 [FreeRTOS任务参数示例](Despacito/007)
+   - 进入 [FreeRTOS队列通信示例](Despacito/008)
    - 按照每个项目的README进行编译和运行
 
 ---
@@ -135,6 +137,9 @@ FreeRTOS多任务创建与删除示例 - 演示如何动态创建、管理和删
 
 ### 🟢 Despacito/007
 FreeRTOS任务参数示例 - 演示如何使用任务参数使任务函数更灵活、可复用，展示如何通过void指针向任务传递不同类型的数据。
+
+### 🟢 Despacito/008
+FreeRTOS队列通信示例 - 演示如何使用队列进行任务间通信，展示了简单消息传递和结构化数据传输，实现任务间的数据交换和功能分离。
 
 ---
 

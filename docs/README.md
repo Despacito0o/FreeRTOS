@@ -21,6 +21,7 @@
 - [005-FreeRTOS项目工程完善指南](zh/005-FreeRTOS项目工程完善指南.md) - 完善FreeRTOS工程，添加串口和优化配置
 - [006-FreeRTOS多任务创建与删除](zh/006-FreeRTOS多任务创建与删除.md) - 介绍FreeRTOS多任务的创建、管理和删除机制
 - [007-FreeRTOS任务参数详解与实践](zh/007-FreeRTOS任务参数详解与实践.md) - 详细介绍FreeRTOS任务参数的使用方法与技巧
+- [008-FreeRTOS队列通信详解与实践](zh/008-FreeRTOS队列通信详解与实践.md) - 详细介绍FreeRTOS队列通信机制及其在任务间数据传递中的应用
 
 ### 💡 教程
 
@@ -41,6 +42,7 @@ This directory contains documentation about FreeRTOS embedded system development
 - [005-FreeRTOS Project Improvement Guide](en/005-FreeRTOS-Project-Improvement-Guide.md) - Improving FreeRTOS projects with UART and optimized configurations
 - [006-FreeRTOS Multi-Task Creation and Deletion](en/006-FreeRTOS-Multi-Task-Creation-and-Deletion.md) - Creating, managing and deleting multiple tasks in FreeRTOS
 - [007-FreeRTOS Task Parameters Explained](en/007-FreeRTOS-Task-Parameters-Explained.md) - Detailed explanation of FreeRTOS task parameters usage and techniques
+- [008-FreeRTOS Queue Communication Guide](en/008-FreeRTOS-Queue-Communication-Guide.md) - Comprehensive guide on using FreeRTOS queues for inter-task communication
 
 ### 💡 Tutorials
 
@@ -61,6 +63,7 @@ docs/
 │   ├── 005-FreeRTOS-Project-Improvement-Guide.md
 │   ├── 006-FreeRTOS-Multi-Task-Creation-and-Deletion.md
 │   ├── 007-FreeRTOS-Task-Parameters-Explained.md
+│   ├── 008-FreeRTOS-Queue-Communication-Guide.md
 │   └── tutorials/             # 英文教程 / English tutorials
 │       └── Creating-Simple-FreeRTOS-Project-on-STM32.md
 └── zh/                        # 中文文档 / Chinese documentation
@@ -71,6 +74,7 @@ docs/
     ├── 005-FreeRTOS项目工程完善指南.md
     ├── 006-FreeRTOS多任务创建与删除.md
     ├── 007-FreeRTOS任务参数详解与实践.md
+    ├── 008-FreeRTOS队列通信详解与实践.md
     └── tutorials/             # 中文教程 / Chinese tutorials
         └── STM32上创建简单FreeRTOS程序详解.md
 ``` 

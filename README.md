@@ -53,7 +53,8 @@ FreeRTOS/
 │   ├── 004/                  # FreeRTOS static task creation
 │   ├── 005/                  # FreeRTOS project improvement (UART+config optimization)
 │   ├── 006/                  # FreeRTOS multi-task creation and deletion
-│   └── 007/                  # FreeRTOS task parameters example
+│   ├── 007/                  # FreeRTOS task parameters example
+│   └── 008/                  # FreeRTOS queue communication example
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -87,6 +88,7 @@ FreeRTOS/
    - Go to [FreeRTOS Project Improvement Example](Despacito/005)
    - Go to [FreeRTOS Multi-Task Creation and Deletion](Despacito/006)
    - Go to [FreeRTOS Task Parameters Example](Despacito/007)
+   - Go to [FreeRTOS Queue Communication Example](Despacito/008)
    - Follow each project's README for compilation and running instructions
 
 ---
@@ -135,6 +137,9 @@ FreeRTOS multi-task creation and deletion example - demonstrates how to dynamica
 
 ### 🟢 Despacito/007
 FreeRTOS task parameters example - demonstrates how to use task parameters to make task functions more flexible and reusable, showing how to pass different types of data to tasks using the void pointer parameter.
+
+### 🟢 Despacito/008
+FreeRTOS queue communication example - demonstrates how to use queues for inter-task communication, showing both simple message passing and structured data transmission between tasks.
 
 ---
 
@@ -194,6 +199,9 @@ FreeRTOS multi-task creation and deletion example - demonstrates how to dynamica
 
 #### Despacito/007
 FreeRTOS task parameters example - demonstrates how to use task parameters to make task functions more flexible and reusable, showing how to pass different types of data to tasks using the void pointer parameter.
+
+#### Despacito/008
+FreeRTOS queue communication example - demonstrates how to use queues for inter-task communication, showing how to pass simple messages and structured data between tasks for better task separation and cleaner code organization.
 
 ---
 
