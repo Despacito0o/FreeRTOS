@@ -1,121 +1,154 @@
-# 项目标题 / Project Title
+# [项目名称] - FreeRTOS示例项目
 
 <div align="center">
 
-[English](#english) | [中文](#中文)
+![Project Status: Active](https://img.shields.io/badge/Project%20Status-Active-green)
+![MCU](https://img.shields.io/badge/MCU-STM32F103-blue)
+![IDE](https://img.shields.io/badge/IDE-Keil%20MDK-lightgrey)
+![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-brightgreen)
 
+<img src="./project_image.png" alt="项目图片" width="400">
 </div>
 
----
+## 📋 项目概述
 
-## 中文
+简洁明了地描述本示例项目的主要功能和目的。解释这个项目展示了哪些FreeRTOS的关键概念，以及读者能从中学到什么。
 
-### 📖 项目简介
+### 🎯 学习目标
 
-[在这里简要描述项目的目的和功能]
+- 学习目标1：例如了解FreeRTOS任务创建
+- 学习目标2：例如掌握队列通信机制
+- 学习目标3：例如实践参数传递方法
 
-### ✨ 功能特点
+### 📔 先决条件
 
-- [功能1]
-- [功能2]
-- [功能3]
+- STM32F103系列开发板
+- Keil MDK开发环境 (推荐v5.25以上)
+- ST-Link调试器
+- 基本的嵌入式C编程知识
+- [可选] 串口调试工具
 
-### 🔧 硬件要求
+## ⚙️ 硬件连接
 
-- 开发板：[例如：STM32F103C8T6]
-- 外设：[例如：LED、按钮等]
-- 调试器：[例如：ST-Link]
+详细说明项目所需的硬件连接方式：
 
-### 🛠️ 开发环境
+| 引脚 | 功能 | 连接 |
+|-----|------|------|
+| PA9 | USART1_TX | USB转串口RX |
+| PA10 | USART1_RX | USB转串口TX |
+| PC13 | LED | 板载LED |
+| ... | ... | ... |
 
-- IDE：[例如：Keil MDK 5.x]
-- 编译器：[例如：ARM Compiler 5/6]
-- 库：[例如：STM32标准外设库、FreeRTOS]
+<div align="center">
+  <img src="./connection_diagram.png" alt="连接图" width="60%">
+</div>
 
-### 📂 项目结构
+## 🚀 快速开始
+
+### 编译和下载
+
+1. 使用Keil MDK打开项目文件 `Project.uvprojx`
+2. 编译项目（F7或点击Build按钮）
+3. 连接开发板和ST-Link
+4. 下载程序到开发板（F8或点击Download按钮）
+
+### 查看运行结果
+
+1. 打开串口调试工具（波特率：115200，数据位：8，停止位：1，校验：无）
+2. 复位开发板，观察串口输出
+3. 预期可以看到以下输出：
+   ```
+   System initialized...
+   FreeRTOS Kernel starting...
+   Task1 running...
+   Task2 running...
+   ...
+   ```
+
+## 📝 代码结构
 
 ```
-项目目录/
-├── src/                 # 源代码
-├── inc/                 # 头文件
-├── lib/                 # 库文件
-└── doc/                 # 文档
+项目根目录/
+├── FreeRTOS/              # FreeRTOS内核文件
+├── Driver/                # 驱动文件
+│   └── usart/             # 串口驱动
+├── User/                  # 用户代码
+│   ├── main.c             # 主程序
+│   ├── stm32f10x_it.c     # 中断处理
+│   └── ...
+└── ...
 ```
 
-### 🚀 使用方法
+## 💡 核心代码讲解
 
-1. 克隆仓库：`git clone https://github.com/Despacito0o/FreeRTOS.git`
-2. 打开项目：[说明如何打开项目]
-3. 编译项目：[说明如何编译项目]
-4. 下载程序：[说明如何下载程序到开发板]
-
-### 📝 代码示例
+### 1. 任务创建
 
 ```c
-// 在这里展示关键代码片段
-void example(void) {
-    // 示例代码
-}
+/* 创建任务示例 */
+xTaskCreate(
+    vTask1,                /* 任务函数 */
+    "Task1",               /* 任务名称 */
+    configMINIMAL_STACK_SIZE, /* 任务栈大小 */
+    NULL,                  /* 任务参数 */
+    1,                     /* 任务优先级 */
+    &xTask1Handle);        /* 任务句柄 */
 ```
 
-### 📚 相关文档
+这段代码展示了如何创建一个FreeRTOS任务。`xTaskCreate`函数是FreeRTOS提供的API，用于动态创建任务。
 
-- [文档1链接]
-- [文档2链接]
+### 2. 关键功能
+
+此处讲解项目中最重要的代码片段，解释它们如何工作以及为何这样设计。包括：
+
+- 初始化过程
+- 任务函数实现
+- 通信机制
+- 特殊技巧
+
+## 🔄 关键流程
+
+描述系统的整体工作流程，可以使用流程图：
+
+```
+初始化硬件 → 创建任务 → 启动调度器 → 任务1执行 → 任务2执行 → ...
+```
+
+## 📚 学习要点
+
+1. **要点1**：例如任务优先级影响调度顺序
+2. **要点2**：例如队列阻塞机制的影响
+3. **要点3**：例如内存管理策略的选择
+
+## 🧪 实验变体
+
+尝试以下修改来更深入理解概念：
+
+1. 修改任务优先级，观察执行顺序变化
+2. 更改队列长度，测试不同阻塞场景
+3. 添加新任务，实现更复杂的功能
+
+## 📌 常见问题
+
+1. **问题**: 程序无法编译？  
+   **解答**: 检查包含路径是否正确设置，确保所有源文件都已添加到项目中。
+
+2. **问题**: 串口没有输出？  
+   **解答**: 确认波特率设置，检查TX/RX连接是否正确。
+
+## 📚 延伸阅读
+
+- [FreeRTOS官方文档](https://www.freertos.org/Documentation/RTOS_book.html)
+- [STM32参考手册](https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
+- 相关示例项目：[项目链接]
+
+## 🤝 贡献
+
+欢迎提交问题和改进建议！请查看[贡献指南](../../CONTRIBUTING.md)了解更多信息。
 
 ---
 
-## English
+<div align="center">
 
-### 📖 Project Description
+[返回主页](../../README.md) | [English](./README.md) | [中文](./README_zh.md)
 
-[Briefly describe the purpose and functionality of the project here]
-
-### ✨ Features
-
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
-
-### 🔧 Hardware Requirements
-
-- Development Board: [e.g., STM32F103C8T6]
-- Peripherals: [e.g., LED, Buttons, etc.]
-- Debugger: [e.g., ST-Link]
-
-### 🛠️ Development Environment
-
-- IDE: [e.g., Keil MDK 5.x]
-- Compiler: [e.g., ARM Compiler 5/6]
-- Libraries: [e.g., STM32 Standard Peripheral Library, FreeRTOS]
-
-### 📂 Project Structure
-
-```
-project_directory/
-├── src/                 # Source code
-├── inc/                 # Header files
-├── lib/                 # Libraries
-└── doc/                 # Documentation
-```
-
-### 🚀 Usage
-
-1. Clone repository: `git clone https://github.com/Despacito0o/FreeRTOS.git`
-2. Open project: [Explain how to open the project]
-3. Compile project: [Explain how to compile the project]
-4. Download program: [Explain how to download the program to the development board]
-
-### 📝 Code Example
-
-```c
-// Show key code snippets here
-void example(void) {
-    // Example code
-}
-```
-
-### 📚 Related Documentation
-
-- [Document 1 Link]
-- [Document 2 Link] 
+</div> 

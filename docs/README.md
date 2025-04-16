@@ -1,80 +1,83 @@
-# FreeRTOS 文档目录 / FreeRTOS Documentation Directory
+# FreeRTOS 学习资源文档索引
+
+<div align="center">
+<img src="https://www.freertos.org/fr-content-src/uploads/2018/07/logo-1.jpg" width="300">
+</div>
+
+## 📚 文档概览
+
+欢迎访问FreeRTOS学习资源文档！这里提供了从入门到精通的系统化教程和指南，帮助您高效学习嵌入式RTOS开发。
+
+我们的文档遵循渐进式学习路径，让您能够循序渐进地掌握FreeRTOS的核心概念和实际应用技术。
+
+## 🗂️ 文档分类
+
+### 📖 英文文档 (English Documentation)
+
+#### 基础入门 (Getting Started)
+* **[001-STM32 Development Environment Setup](en/001-STM32-Development-Environment-Setup.md)** - STM32开发环境配置
+* **[002-FreeRTOS Port to Keil6](en/002-FreeRTOS-Port-to-Keil6.md)** - FreeRTOS在Keil6中的移植
+
+#### 核心概念 (Core Concepts)
+* **[003-FreeRTOS Dynamic Task Creation](en/003-FreeRTOS-Dynamic-Task-Creation.md)** - 动态任务创建
+* **[004-FreeRTOS Static Task Creation](en/004-FreeRTOS-Static-Task-Creation.md)** - 静态任务创建
+* **[005-FreeRTOS Project Improvement Guide](en/005-FreeRTOS-Project-Improvement-Guide.md)** - 项目改进指南
+
+#### 高级主题 (Advanced Topics)
+* **[006-FreeRTOS Multi-Task Management](en/006-FreeRTOS-Multi-Task-Management.md)** - 多任务管理
+* **[007-FreeRTOS Task Parameters](en/007-FreeRTOS-Task-Parameters.md)** - 任务参数
+* **[008-FreeRTOS Queue Communication](en/008-FreeRTOS-Queue-Communication.md)** - 队列通信
+* **[009-FreeRTOS Advanced Queue Operations](en/009-FreeRTOS-Queue-Advanced-Operations.md)** - 高级队列操作
+
+#### 实用教程 (Practical Tutorials)
+* **[Creating a Simple FreeRTOS Project on STM32](en/tutorials/Creating-Simple-FreeRTOS-Project-on-STM32.md)** - 在STM32上创建简单FreeRTOS项目
+
+### 📖 中文文档 (Chinese Documentation)
+
+#### 基础入门
+* **[001-STM32标准库开发环境搭建教程](zh/001-STM32标准库开发环境搭建教程.md)** - STM32开发环境配置
+* **[002-FreeRTOS移植到keil6](zh/002-FreeRTOS移植到keil6.md)** - FreeRTOS在Keil6中的移植
+
+#### 核心概念
+* **[003-FreeRTOS动态任务创建](zh/003-FreeRTOS动态任务创建.md)** - 动态任务创建
+* **[004-FreeRTOS静态任务创建](zh/004-FreeRTOS静态任务创建.md)** - 静态任务创建
+* **[005-FreeRTOS项目工程完善指南](zh/005-FreeRTOS项目工程完善指南.md)** - 项目改进指南
+
+#### 高级主题
+* **[006-FreeRTOS多任务管理](zh/006-FreeRTOS多任务管理.md)** - 多任务管理
+* **[007-FreeRTOS任务参数](zh/007-FreeRTOS任务参数.md)** - 任务参数
+* **[008-FreeRTOS队列通信](zh/008-FreeRTOS队列通信.md)** - 队列通信
+* **[009-FreeRTOS队列高级操作](zh/009-FreeRTOS队列高级操作.md)** - 高级队列操作
+
+#### 实用教程
+* **[STM32上创建简单FreeRTOS程序详解](zh/tutorials/STM32上创建简单FreeRTOS程序详解.md)** - 在STM32上创建简单FreeRTOS项目
+
+## 🗺️ 学习路径
+
+推荐的学习路径如下：
+
+1. **环境设置** - 首先设置开发环境并完成基本移植 (001-002)
+2. **任务基础** - 学习任务创建和内存管理模型 (003-004)
+3. **项目完善** - 添加调试功能和提升项目质量 (005)
+4. **高级任务管理** - 掌握任务生命周期管理和参数传递 (006-007)
+5. **任务间通信** - 学习队列通信和高级数据传输技术 (008-009)
+
+每个文档都配有相应的示例项目，位于仓库的`Despacito/`目录下。
+
+## 🔄 最近更新
+
+* 添加了FreeRTOS队列高级操作文档和示例 (009)
+* 更新了队列通信示例 (008)
+* 优化了多任务管理文档
+
+## 📝 贡献文档
+
+欢迎贡献新的文档或改进现有内容！请参阅[贡献指南](../CONTRIBUTING.md)了解更多信息。
+
+---
 
 <div align="center">
 
-[English](#english-documentation) | [中文](#中文文档)
+[返回主页](../README.md) | [English](README.md) | [中文](README_zh.md)
 
-</div>
-
----
-
-## 中文文档
-
-本目录包含了有关FreeRTOS嵌入式系统开发的文档资料。您可以根据自己的需求选择相应的文档阅读。
-
-### 📚 核心文档
-
-- [001-STM32标准库开发环境搭建教程](zh/001-STM32标准库开发环境搭建教程.md) - 详细介绍如何设置STM32开发环境
-- [002-FreeRTOS移植到keil6](zh/002-FreeRTOS移植到keil6.md) - 介绍如何将FreeRTOS移植到STM32平台
-- [003-FreeRTOS动态任务创建](zh/003-FreeRTOS动态任务创建.md) - 基于STM32F103的FreeRTOS动态任务创建
-- [004-FreeRTOS静态任务创建](zh/004-FreeRTOS静态任务创建.md) - 使用静态内存分配方式创建FreeRTOS任务
-- [005-FreeRTOS项目工程完善指南](zh/005-FreeRTOS项目工程完善指南.md) - 完善FreeRTOS工程，添加串口和优化配置
-- [006-FreeRTOS多任务创建与删除](zh/006-FreeRTOS多任务创建与删除.md) - 介绍FreeRTOS多任务的创建、管理和删除机制
-- [007-FreeRTOS任务参数详解与实践](zh/007-FreeRTOS任务参数详解与实践.md) - 详细介绍FreeRTOS任务参数的使用方法与技巧
-- [008-FreeRTOS队列通信详解与实践](zh/008-FreeRTOS队列通信详解与实践.md) - 详细介绍FreeRTOS队列通信机制及其在任务间数据传递中的应用
-
-### 💡 教程
-
-- [STM32上创建简单FreeRTOS程序详解](zh/tutorials/STM32上创建简单FreeRTOS程序详解.md) - 从零开始创建FreeRTOS程序
-
----
-
-## English Documentation
-
-This directory contains documentation about FreeRTOS embedded system development. You can choose the appropriate document based on your needs.
-
-### 📚 Core Documentation
-
-- [001-STM32 Development Environment Setup](en/001-STM32-Development-Environment-Setup.md) - Detailed guide on setting up STM32 development environment
-- [002-FreeRTOS Port to Keil6](en/002-FreeRTOS-Port-to-Keil6.md) - Guide on porting FreeRTOS to STM32 platform
-- [003-FreeRTOS Dynamic Task Creation](en/003-FreeRTOS-Dynamic-Task-Creation.md) - Creating dynamic tasks in FreeRTOS
-- [004-FreeRTOS Static Task Creation](en/004-FreeRTOS-Static-Task-Creation.md) - Creating tasks using static memory allocation
-- [005-FreeRTOS Project Improvement Guide](en/005-FreeRTOS-Project-Improvement-Guide.md) - Improving FreeRTOS projects with UART and optimized configurations
-- [006-FreeRTOS Multi-Task Creation and Deletion](en/006-FreeRTOS-Multi-Task-Creation-and-Deletion.md) - Creating, managing and deleting multiple tasks in FreeRTOS
-- [007-FreeRTOS Task Parameters Explained](en/007-FreeRTOS-Task-Parameters-Explained.md) - Detailed explanation of FreeRTOS task parameters usage and techniques
-- [008-FreeRTOS Queue Communication Guide](en/008-FreeRTOS-Queue-Communication-Guide.md) - Comprehensive guide on using FreeRTOS queues for inter-task communication
-
-### 💡 Tutorials
-
-- [Creating a Simple FreeRTOS Project on STM32](en/tutorials/Creating-Simple-FreeRTOS-Project-on-STM32.md) - Creating a FreeRTOS program from scratch
-
----
-
-## 文档结构 / Directory Structure
-
-```
-docs/
-├── README.md                  # 本文件 / This file
-├── en/                        # 英文文档 / English documentation
-│   ├── 001-STM32-Development-Environment-Setup.md
-│   ├── 002-FreeRTOS-Port-to-Keil6.md
-│   ├── 003-FreeRTOS-Dynamic-Task-Creation.md
-│   ├── 004-FreeRTOS-Static-Task-Creation.md
-│   ├── 005-FreeRTOS-Project-Improvement-Guide.md
-│   ├── 006-FreeRTOS-Multi-Task-Creation-and-Deletion.md
-│   ├── 007-FreeRTOS-Task-Parameters-Explained.md
-│   ├── 008-FreeRTOS-Queue-Communication-Guide.md
-│   └── tutorials/             # 英文教程 / English tutorials
-│       └── Creating-Simple-FreeRTOS-Project-on-STM32.md
-└── zh/                        # 中文文档 / Chinese documentation
-    ├── 001-STM32标准库开发环境搭建教程.md
-    ├── 002-FreeRTOS移植到keil6.md
-    ├── 003-FreeRTOS动态任务创建.md
-    ├── 004-FreeRTOS静态任务创建.md
-    ├── 005-FreeRTOS项目工程完善指南.md
-    ├── 006-FreeRTOS多任务创建与删除.md
-    ├── 007-FreeRTOS任务参数详解与实践.md
-    ├── 008-FreeRTOS队列通信详解与实践.md
-    └── tutorials/             # 中文教程 / Chinese tutorials
-        └── STM32上创建简单FreeRTOS程序详解.md
-``` 
+</div> 
