@@ -1055,7 +1055,7 @@ I (Library\stm32f10x_usart.h)(0x4D783BB4)
 I (Library\stm32f10x_wwdg.h)(0x4D783BB4)
 I (Library\misc.h)(0x4D783BB4)
 F (.\Driver\usart\usart.h)(0x651FB68A)()
-F (.\User\main.c)(0x67F7D584)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Start -I ./User -I ./Library -I ./FreeRTOS -I ./FreeRTOS/inc -I ./FreeRTOS/port -I ./FreeRTOS/src -I ./Driver -I ./Driver/usart-ID:/keil/pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="542" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/main.o -MMD)
+F (.\User\main.c)(0x67FF6D83)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Start -I ./User -I ./Library -I ./FreeRTOS -I ./FreeRTOS/inc -I ./FreeRTOS/port -I ./FreeRTOS/src -I ./Driver -I ./Driver/usart-ID:/keil/pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="542" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/main.o -MMD)
 I (Start\stm32f10x.h)(0x4D783CB4)
 I (Start\core_cm3.h)(0x5D1623CA)
 I (Start\system_stm32f10x.h)(0x4D783CAA)
@@ -1083,7 +1083,7 @@ I (Library\stm32f10x_tim.h)(0x4D783BB4)
 I (Library\stm32f10x_usart.h)(0x4D783BB4)
 I (Library\stm32f10x_wwdg.h)(0x4D783BB4)
 I (Library\misc.h)(0x4D783BB4)
-I (FreeRTOS\inc\FreeRTOS.h)(0x67EFB5C2)
+I (FreeRTOS\inc\freertos.h)(0x67EFB5C2)
 I (FreeRTOS\FreeRTOSConfig.h)(0x67F7C609)
 I (FreeRTOS\inc\projdefs.h)(0x64020E50)
 I (FreeRTOS\inc\portable.h)(0x64020E50)
@@ -1093,6 +1093,7 @@ I (FreeRTOS\inc\mpu_wrappers.h)(0x64020E50)
 I (FreeRTOS\inc\task.h)(0x64020E50)
 I (FreeRTOS\inc\list.h)(0x64020E50)
 I (Driver\usart\usart.h)(0x651FB68A)
+I (FreeRTOS\inc\queue.h)(0x64020E50)
 F (.\User\stm32f10x_conf.h)(0x4D99A59E)()
 F (.\User\stm32f10x_it.c)(0x67F7DF54)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Start -I ./User -I ./Library -I ./FreeRTOS -I ./FreeRTOS/inc -I ./FreeRTOS/port -I ./FreeRTOS/src -I ./Driver -I ./Driver/usart-ID:/keil/pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="542" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_it.o -MMD)
 I (User\stm32f10x_it.h)(0x4D99A59E)

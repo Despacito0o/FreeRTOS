@@ -10,8 +10,9 @@
   Library\stm32f10x_rcc.h Library\stm32f10x_rtc.h \
   Library\stm32f10x_sdio.h Library\stm32f10x_spi.h \
   Library\stm32f10x_tim.h Library\stm32f10x_usart.h \
-  Library\stm32f10x_wwdg.h Library\misc.h FreeRTOS\inc\FreeRTOS.h \
+  Library\stm32f10x_wwdg.h Library\misc.h FreeRTOS\inc\freertos.h \
   FreeRTOS\FreeRTOSConfig.h FreeRTOS\inc\projdefs.h \
   FreeRTOS\inc\portable.h FreeRTOS\inc\deprecated_definitions.h \
   FreeRTOS\port\portmacro.h FreeRTOS\inc\mpu_wrappers.h \
-  FreeRTOS\inc\task.h FreeRTOS\inc\list.h Driver\usart\usart.h
+  FreeRTOS\inc\task.h FreeRTOS\inc\list.h Driver\usart\usart.h \
+  FreeRTOS\inc\queue.h

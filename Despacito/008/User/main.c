@@ -1,50 +1,109 @@
 #include "stm32f10x.h"                  // Device header
-#include "FreeRTOS.h"
+#include "freertos.h"
 #include "task.h"
 #include "usart.h"
-TaskHandle_t myTaskHandler;
+#include "queue.h"
 
-void myTask(void *arg)
+
+TaskHandle_t myTaskHandler1;
+TaskHandle_t myTaskHandler2;
+TaskHandle_t myTaskHandler3;
+TaskHandle_t startTaskHandler;
+
+QueueHandle_t myPrintfQueueHandler;
+
+struct print{
+	int cnt;
+	char data[20];
+};
+
+
+void myTask1( void * arg)
 {
-		while(1)
+	struct print data = {
+		.data = "myTask1 running"
+	};
+	while(1)
+	{
+//		taskENTER_CRITICAL();
+//		printf("myTask1 running\n");
+//		taskEXIT_CRITICAL();	
+		data.cnt ++;
+		xQueueSend(myPrintfQueueHandler, &data, 0);
+		vTaskDelay(500);
+	}
+}
+
+void myTask2( void * arg)
+{
+	struct print data = {
+		.data = "myTask2 running"
+	};
+	while(1)
+	{
+//		taskENTER_CRITICAL();
+//		printf("myTask2 running\n");
+//		taskEXIT_CRITICAL();
+		data.cnt ++;
+		xQueueSend(myPrintfQueueHandler, &data, 0);
+		vTaskDelay(500);
+	}
+}
+
+void myTask3( void * arg)
+{
+	struct print data;
+	BaseType_t xStatus;
+	while(1)
+	{
+		xStatus = xQueueReceive(myPrintfQueueHandler, &data, portMAX_DELAY);
+		if(xStatus == pdPASS)
 		{
-		  GPIO_ResetBits(GPIOC, GPIO_Pin_13);
-			vTaskDelay(500);
-			GPIO_SetBits(GPIOC, GPIO_Pin_13);
-			vTaskDelay(500);
+			taskENTER_CRITICAL();
+			printf("%s:%d\n", data.data, data.cnt);
+			taskEXIT_CRITICAL();
 		}
+//		vTaskDelay(500);
+	}
+}
+
+void startTask(void * arg)
+{
+	taskENTER_CRITICAL();
+	printf("startTask running\n");
+	taskEXIT_CRITICAL();
+	xTaskCreate(myTask1, "myTask1", 128, NULL, 2, &myTaskHandler1); 
+	xTaskCreate(myTask2, "myTask2", 128, NULL, 2, &myTaskHandler2); 
+	xTaskCreate(myTask3, "myTask3", 128, NULL, 2, &myTaskHandler3); 
+	vTaskDelete(NULL);
 }
 
 int main(void)
 {
-	/*开启时钟*/
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);	//开启GPIOC的时钟
-	/*GPIO初始化*/
-	GPIO_InitTypeDef GPIO_InitStructure;					//定义结构体变量
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;		//GPIO模式，赋值为推挽输出模式
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;				//GPIO引脚，赋值为第13号引脚
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		//GPIO速度，赋值为50MHz
-	GPIO_Init(GPIOC, &GPIO_InitStructure);					//将赋值后的构体变量传递给GPIO_Init函数
-//	GPIO_SetBits(GPIOC, GPIO_Pin_13);						//将PC13引脚设置为高电平
-	GPIO_ResetBits(GPIOC, GPIO_Pin_13);						//将PC13引脚设置为低电平
-	
 	USART_Config();
 	
-	xTaskCreate(myTask,"myTask",128,NULL,2,&myTaskHandler);
+	myPrintfQueueHandler = xQueueCreate(2, sizeof(struct print));
+	
+	xTaskCreate(startTask, "startTask", 128, NULL, 2, &startTaskHandler); 
+	   
 	vTaskStartScheduler();
-	while (1)
+	
+	while(1)
 	{
 		
+	
 	}
+
 }
 
-StaticTask_t        IdleTaskTCB;
-StackType_t					IdleTaskStack[configMINIMAL_STACK_SIZE];
- void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
-                                     StackType_t ** ppxIdleTaskStackBuffer,
-                                     uint32_t * pulIdleTaskStackSize )
- {
-		* ppxIdleTaskTCBBuffer = &IdleTaskTCB;
-		* ppxIdleTaskStackBuffer = IdleTaskStack;
-	  * pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
- }
+StaticTask_t	IdleTaskTCB;
+StackType_t		IdleTaskStack[configMINIMAL_STACK_SIZE];
+void vApplicationGetIdleTaskMemory( StaticTask_t 	**ppxIdleTaskTCBBuffer, 
+									StackType_t 	**ppxIdleTaskStackBuffer, 
+									uint32_t 		*pulIdleTaskStackSize )
+{
+	*ppxIdleTaskTCBBuffer = &IdleTaskTCB;
+	*ppxIdleTaskStackBuffer = IdleTaskStack;	
+	*pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
+
+}
