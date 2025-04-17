@@ -5,6 +5,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/Despacito0o/FreeRTOS.svg?style=social&label=Stars)](https://github.com/Despacito0o/FreeRTOS)
 [![GitHub forks](https://img.shields.io/github/forks/Despacito0o/FreeRTOS.svg?style=social&label=Forks)](https://github.com/Despacito0o/FreeRTOS)
 [![GitHub watchers](https://img.shields.io/github/watchers/Despacito0o/FreeRTOS.svg?style=social&label=Watchers)](https://github.com/Despacito0o/FreeRTOS)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Last Commit](https://img.shields.io/github/last-commit/Despacito0o/FreeRTOS)
+![STM32](https://img.shields.io/badge/MCU-STM32-blue)
+![FreeRTOS](https://img.shields.io/badge/RTOS-FreeRTOS-brightgreen)
+
+<p align="center">
+  <img src="https://www.freertos.org/fr-content-src/uploads/2018/07/logo-1.jpg" width="400">
+</p>
 
 [English](README.md) | [中文](README_zh.md)
 
@@ -14,15 +22,22 @@
 
 ## 📚 项目概述
 
-这是一个专注于FreeRTOS嵌入式系统开发的学习资源库，旨在帮助开发者快速入门STM32开发。该仓库提供了详细的教程、示例代码和开发环境配置指南，帮助您轻松开始FreeRTOS开发之旅。
+这是一个专注于STM32微控制器上的FreeRTOS开发的综合学习资源。本仓库提供了循序渐进的教程、功能完整的示例项目和详细的指南，帮助您掌握嵌入式RTOS开发。
+
+**适合人群：**
+- 🎓 嵌入式系统初学者
+- 🔄 正在转向基于RTOS的应用开发的开发者
+- 🛠️ 寻找实用STM32+FreeRTOS示例的工程师
+- 📝 从事学术项目的学生
 
 ### 🌟 主要特点
 
-- 📖 详细的FreeRTOS移植教程
-- 🔧 完整的STM32开发环境搭建指南
-- 💡 实用的示例项目
-- 📝 清晰的文档说明
-- 🔍 常见问题解决方案
+- 📖 从基础到高级的详细FreeRTOS移植教程
+- 🔧 完整的STM32开发环境搭建指南和故障排除提示
+- 💡 渐进式学习路径和实用示例项目
+- 🔄 RTOS概念的实际演示（任务、队列、信号量等）
+- 📝 中英双语的清晰文档
+- 🔍 常见问题解决方案和调试技巧
 
 ---
 
@@ -45,6 +60,7 @@ FreeRTOS/
 │       ├── 003-FreeRTOS动态任务创建.md
 │       ├── 004-FreeRTOS静态任务创建.md
 │       ├── 005-FreeRTOS项目工程完善指南.md
+│       ├── 010-FreeRTOS二值信号量详解与实战教程.md
 │       └── tutorials/        # 中文教程
 ├── Despacito/                # STM32F103示例项目
 │   ├── 001/                  # STM32项目模板
@@ -54,7 +70,9 @@ FreeRTOS/
 │   ├── 005/                  # FreeRTOS工程完善（串口+配置优化）
 │   ├── 006/                  # FreeRTOS多任务创建与删除
 │   ├── 007/                  # FreeRTOS任务参数示例
-│   └── 008/                  # FreeRTOS队列通信示例
+│   ├── 008/                  # FreeRTOS队列通信示例
+│   ├── 009/                  # FreeRTOS队列高级操作
+│   └── 010/                  # FreeRTOS二值信号量示例
 ├── templates/                # 项目模板
 │   └── README_template.md    # 示例项目README模板
 ├── CONTRIBUTING.md           # 贡献指南
@@ -67,29 +85,36 @@ FreeRTOS/
 
 ## 🚀 快速开始
 
-1. **克隆仓库**
-   ```bash
-   git clone https://github.com/Despacito0o/FreeRTOS.git
-   ```
+### 1. **克隆仓库**
+```bash
+git clone https://github.com/Despacito0o/FreeRTOS.git
+cd FreeRTOS
+```
 
-2. **阅读文档**
-   - 查看 [001-STM32标准库开发环境搭建教程](docs/zh/001-STM32标准库开发环境搭建教程.md)
-   - 学习 [002-FreeRTOS移植到keil6](docs/zh/002-FreeRTOS移植到keil6.md)
-   - 跟随 [003-FreeRTOS动态任务创建](docs/zh/003-FreeRTOS动态任务创建.md)
-   - 学习 [004-FreeRTOS静态任务创建](docs/zh/004-FreeRTOS静态任务创建.md)
-   - 阅读 [005-FreeRTOS项目工程完善指南](docs/zh/005-FreeRTOS项目工程完善指南.md)
-   - 浏览[文档索引](docs/README.md)中的所有文档
+### 2. **按学习路径进行**
+本仓库按循序渐进的学习旅程组织：
 
-3. **运行示例**
-   - 进入 [STM32项目模板](Despacito/001)
-   - 进入 [FreeRTOS基础示例](Despacito/002)
-   - 进入 [FreeRTOS动态任务创建](Despacito/003)
-   - 进入 [FreeRTOS静态任务创建](Despacito/004)
-   - 进入 [FreeRTOS工程完善示例](Despacito/005)
-   - 进入 [FreeRTOS多任务创建与删除](Despacito/006)
-   - 进入 [FreeRTOS任务参数示例](Despacito/007)
-   - 进入 [FreeRTOS队列通信示例](Despacito/008)
-   - 按照每个项目的README进行编译和运行
+| 级别 | 项目 | 重点 | 获得的技能 |
+|-------|----------|-------|--------------|
+| 初级 | 001-002 | 环境搭建，FreeRTOS基础 | 开发环境设置，基本概念 |
+| 中级 | 003-006 | 任务管理，内存模型 | 任务创建/删除，内存优化 |
+| 高级 | 007-010 | 任务间通信与同步 | 参数传递，队列，信号量 |
+
+### 3. **探索示例项目**
+每个示例都在前一个基础上构建，并添加新技能：
+
+- **[001] STM32项目模板** - STM32开发的起点
+- **[002] FreeRTOS基础示例** - FreeRTOS的第一步
+- **[003] 动态任务创建** - 多任务处理
+- **[004] 静态任务创建** - 内存优化的任务创建
+- **[005] 项目完善** - 添加串口通信、调试功能
+- **[006] 多任务操作** - 创建、删除和监控任务
+- **[007] 任务参数** - 使用参数实现灵活的任务函数
+- **[008] 队列通信** - 基本的任务间通信
+- **[009] 队列高级操作** - 高效的数据传输技术
+- **[010] 二值信号量** - 任务同步与互斥访问控制
+
+每个项目都包含完整源代码和详细的README文件，提供解释和使用说明。
 
 ---
 
@@ -97,61 +122,71 @@ FreeRTOS/
 
 ### 📁 核心文档
 
-- [001-STM32标准库开发环境搭建教程](docs/zh/001-STM32标准库开发环境搭建教程.md)
-- [002-FreeRTOS移植到keil6](docs/zh/002-FreeRTOS移植到keil6.md)
-- [003-FreeRTOS动态任务创建](docs/zh/003-FreeRTOS动态任务创建.md)
-- [004-FreeRTOS静态任务创建](docs/zh/004-FreeRTOS静态任务创建.md)
-- [005-FreeRTOS项目工程完善指南](docs/zh/005-FreeRTOS项目工程完善指南.md)
+浏览我们的综合指南：
 
-### 📝 项目相关
+- **[001]** [STM32标准库开发环境搭建教程](docs/zh/001-STM32标准库开发环境搭建教程.md)
+- **[002]** [FreeRTOS移植到keil6](docs/zh/002-FreeRTOS移植到keil6.md)
+- **[003]** [FreeRTOS动态任务创建](docs/zh/003-FreeRTOS动态任务创建.md)
+- **[004]** [FreeRTOS静态任务创建](docs/zh/004-FreeRTOS静态任务创建.md)
+- **[005]** [FreeRTOS项目工程完善指南](docs/zh/005-FreeRTOS项目工程完善指南.md)
+- **[010]** [FreeRTOS二值信号量详解与实战教程](docs/zh/010-FreeRTOS二值信号量详解与实战教程.md)
+
+### 📝 项目资源
 
 - [文档索引](docs/README.md) - 导航所有可用文档
 - [贡献指南](CONTRIBUTING.md) - 如何为项目做出贡献
-- [变更日志](CHANGELOG.md) - 版本历史和变更记录
+- [变更日志](CHANGELOG.md) - 版本历史和最近更新
 
-### 🧠 教程
+### 🧠 实用教程
 
-- [STM32上创建简单FreeRTOS程序详解](docs/zh/tutorials/STM32上创建简单FreeRTOS程序详解.md) - 从零开始创建FreeRTOS程序
+- [STM32上创建简单FreeRTOS程序详解](docs/zh/tutorials/STM32上创建简单FreeRTOS程序详解.md)
 
 ---
 
-## 🔍 示例项目
+## 🔍 示例项目详解
 
-### 🟢 Despacito/001
-基础STM32F103项目模板，包含标准外设库。
+### 🟢 [001] STM32项目模板
+一个干净、即用的STM32F103模板，包含标准外设库，是所有其他示例的基础。
 
-### 🟢 Despacito/002
-FreeRTOS基础示例，展示任务创建和基本功能。
+### 🟢 [002] FreeRTOS基础示例
+FreeRTOS的第一步 - 演示基本任务创建和LED闪烁等简单功能。
 
-### 🟢 Despacito/003
-FreeRTOS动态任务创建示例 - 演示任务创建和调度，实现简单的LED闪烁模式。
+### 🟢 [003] 动态任务创建
+学习FreeRTOS中任务如何动态创建和调度，包含任务优先级和调度的实际示例。
 
-### 🟢 Despacito/004
-FreeRTOS静态任务创建示例 - 演示如何使用静态内存分配方式创建任务，适用于资源受限的系统。
+### 🟢 [004] 静态任务创建
+探索任务创建的静态内存分配 - 对于内存受限的嵌入式系统至关重要，特别是在动态分配可能存在问题的情况下。
 
-### 🟢 Despacito/005
-FreeRTOS工程完善示例 - 添加串口通信功能、printf调试输出、优化FreeRTOS配置，使工程更加健壮和实用。
+### 🟢 [005] 项目完善
+通过串口通信、printf调试和优化配置提升项目水平 - 使开发更加便捷和高效。
 
-### 🟢 Despacito/006
-FreeRTOS多任务创建与删除示例 - 演示如何动态创建、管理和删除任务，展示任务优先级对系统行为的影响，以及任务状态监控的实用方法。
+### 🟢 [006] 多任务操作
+掌握任务生命周期管理，包括动态创建和删除、优先级管理和状态监控技术。
 
-### 🟢 Despacito/007
-FreeRTOS任务参数示例 - 演示如何使用任务参数使任务函数更灵活、可复用，展示如何通过void指针向任务传递不同类型的数据。
+### 🟢 [007] 任务参数
+通过学习如何使用void指针传递参数，使任务更灵活和可重用 - 构建模块化RTOS应用的基本技能。
 
-### 🟢 Despacito/008
-FreeRTOS队列通信示例 - 演示如何使用队列进行任务间通信，展示了简单消息传递和结构化数据传输，实现任务间的数据交换和功能分离。
+### 🟢 [008] 队列通信
+使用队列实现可靠的任务间通信，包括简单消息传递和结构化数据传输的示例。
+
+### 🟢 [009] 队列高级操作
+探索高效的任务间数据传输高级技术，包括基于指针的方法和常见问题的解决方案。
+
+### 🟢 [010] 二值信号量
+掌握二值信号量的使用，实现任务同步和互斥资源访问，包括详细的信号量API解析和典型应用场景。
 
 ---
 
 ## 🤝 贡献
 
-欢迎提交贡献来帮助改进这个项目。在提交任何Pull Request或Issue之前，请阅读我们的[贡献指南](CONTRIBUTING.md)。
+您的贡献使这个资源对所有人都更有价值！在提交拉取请求或问题之前，请阅读我们的[贡献指南](CONTRIBUTING.md)。
 
-关键要点：
-- Fork本仓库并创建特性分支
-- 遵循代码风格和文档标准
-- 彻底测试您的更改
-- 提交具有清晰描述的Pull Request
+贡献方式：
+- 📝 改进文档和解释
+- 🐛 修复示例代码中的错误
+- ✨ 添加新的示例或教程
+- 🌍 帮助翻译
+- 💡 提出改进建议
 
 ---
 
@@ -161,13 +196,22 @@ FreeRTOS队列通信示例 - 演示如何使用队列进行任务间通信，展
 
 ---
 
-## 👨‍💻 作者
+## 👨‍💻 作者与联系方式
 
-- [Despacito0o](https://github.com/Despacito0o) - FreeRTOS开发者和教程创作者
-- 访问我的 [CSDN博客](https://blog.csdn.net/supershmily) 获取更多嵌入式开发内容
+- **[Despacito0o](https://github.com/Despacito0o)** - FreeRTOS开发者和教程创作者
+- 访问我的 **[CSDN博客](https://blog.csdn.net/supershmily)** 获取更多嵌入式开发内容
+- 有问题或建议？请创建issue或直接联系！
 
 ---
 
 ## 🙏 致谢
 
-感谢所有为这个项目做出贡献的开发者！ 
+- FreeRTOS开发团队的优秀文档
+- STMicroelectronics的全面外设库
+- 所有为改进这个资源的贡献者和社区成员
+
+---
+
+<div align="center">
+⭐ 如果您觉得这个项目有帮助，请给它点亮星标！ ⭐
+</div> 

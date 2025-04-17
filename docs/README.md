@@ -28,6 +28,7 @@
 * **[007-FreeRTOS Task Parameters](en/007-FreeRTOS-Task-Parameters.md)** - 任务参数
 * **[008-FreeRTOS Queue Communication](en/008-FreeRTOS-Queue-Communication.md)** - 队列通信
 * **[009-FreeRTOS Advanced Queue Operations](en/009-FreeRTOS-Queue-Advanced-Operations.md)** - 高级队列操作
+* **[010-FreeRTOS Binary Semaphore](en/010-FreeRTOS-Binary-Semaphore.md)** - 二值信号量
 
 #### 实用教程 (Practical Tutorials)
 * **[Creating a Simple FreeRTOS Project on STM32](en/tutorials/Creating-Simple-FreeRTOS-Project-on-STM32.md)** - 在STM32上创建简单FreeRTOS项目
@@ -48,6 +49,7 @@
 * **[007-FreeRTOS任务参数](zh/007-FreeRTOS任务参数.md)** - 任务参数
 * **[008-FreeRTOS队列通信](zh/008-FreeRTOS队列通信.md)** - 队列通信
 * **[009-FreeRTOS队列高级操作](zh/009-FreeRTOS队列高级操作.md)** - 高级队列操作
+* **[010-FreeRTOS二值信号量详解与实战教程](zh/010-FreeRTOS二值信号量详解与实战教程.md)** - 二值信号量与同步控制
 
 #### 实用教程
 * **[STM32上创建简单FreeRTOS程序详解](zh/tutorials/STM32上创建简单FreeRTOS程序详解.md)** - 在STM32上创建简单FreeRTOS项目
@@ -61,11 +63,13 @@
 3. **项目完善** - 添加调试功能和提升项目质量 (005)
 4. **高级任务管理** - 掌握任务生命周期管理和参数传递 (006-007)
 5. **任务间通信** - 学习队列通信和高级数据传输技术 (008-009)
+6. **任务同步机制** - 掌握二值信号量实现任务同步和互斥访问 (010)
 
 每个文档都配有相应的示例项目，位于仓库的`Despacito/`目录下。
 
 ## 🔄 最近更新
 
+* 添加了FreeRTOS二值信号量详解与实战教程文档和示例 (010)
 * 添加了FreeRTOS队列高级操作文档和示例 (009)
 * 更新了队列通信示例 (008)
 * 优化了多任务管理文档
