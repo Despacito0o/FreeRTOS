@@ -61,6 +61,7 @@ FreeRTOS/
 │       ├── 004-FreeRTOS静态任务创建.md
 │       ├── 005-FreeRTOS项目工程完善指南.md
 │       ├── 010-FreeRTOS二值信号量详解与实战教程.md
+│       ├── 011-FreeRTOS计数型信号量详解与实战教程.md
 │       └── tutorials/        # Chinese tutorials
 ├── Despacito/                # STM32F103 example projects
 │   ├── 001/                  # STM32 project template
@@ -72,7 +73,8 @@ FreeRTOS/
 │   ├── 007/                  # FreeRTOS task parameters example
 │   ├── 008/                  # FreeRTOS queue communication example
 │   ├── 009/                  # FreeRTOS advanced queue operations
-│   └── 010/                  # FreeRTOS binary semaphore example
+│   ├── 010/                  # FreeRTOS binary semaphore example
+│   └── 011/                  # FreeRTOS counting semaphore example
 ├── templates/                # Project templates
 │   └── README_template.md    # README template for examples
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -98,7 +100,7 @@ This repository is organized as a progressive learning journey:
 |-------|----------|-------|--------------|
 | Beginner | 001-002 | Environment setup, FreeRTOS basics | Development setup, Basic concepts |
 | Intermediate | 003-006 | Task management, Memory models | Task creation/deletion, Memory optimization |
-| Advanced | 007-010 | Inter-task communication and synchronization | Parameters, Queues, Semaphores |
+| Advanced | 007-011 | Inter-task communication and synchronization | Parameters, Queues, Semaphores, Resource management |
 
 ### 3. **Explore example projects**
 Each example builds on previous concepts and adds new skills:
@@ -113,6 +115,7 @@ Each example builds on previous concepts and adds new skills:
 - **[008] Queue Communication** - Basic inter-task communication
 - **[009] Advanced Queue Operations** - Efficient data transfer techniques
 - **[010] Binary Semaphores** - Task synchronization and mutual exclusion
+- **[011] Counting Semaphores** - Resource management and event counting
 
 Each project includes complete source code and a detailed README with explanations and instructions.
 
@@ -130,6 +133,7 @@ Browse our comprehensive guides:
 - **[004]** [FreeRTOS Static Task Creation](docs/en/004-FreeRTOS-Static-Task-Creation.md)
 - **[005]** [FreeRTOS Project Improvement Guide](docs/en/005-FreeRTOS-Project-Improvement-Guide.md)
 - **[010]** [FreeRTOS Binary Semaphore Tutorial (Chinese)](docs/zh/010-FreeRTOS二值信号量详解与实战教程.md)
+- **[011]** [FreeRTOS Counting Semaphore Tutorial (Chinese)](docs/zh/011-FreeRTOS计数型信号量详解与实战教程.md)
 
 ### 📝 Project Resources
 
@@ -174,6 +178,9 @@ Explore advanced techniques for efficient data transfer between tasks, including
 
 ### 🟢 [010] Binary Semaphores
 Master the use of binary semaphores for task synchronization and mutual exclusion, with detailed API analysis and typical application scenarios.
+
+### 🟢 [011] Counting Semaphores
+Learn to use counting semaphores for resource pool management and event counting, with practical examples for advanced synchronization scenarios.
 
 ---
 
